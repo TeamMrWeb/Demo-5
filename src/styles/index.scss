@@ -1,78 +1,5 @@
-$primaryColor: #F77B05;
-$secundaryColor: #C92D0B;
-$blackColor: #242A35;
-$whiteColor: #FFFFFF;
-$textColor: #D1D2D0;
-$textBlackColor: #60636C;
-$maxSectionWidth: 1300px;
-$fontFamily: "MerriweatherSans";
-
-@font-face {
-    src: url("./fonts/MerriweatherSans-Light.ttf") format("truetype");
-    font-family: $fontFamily;
-    font-weight: 300;
-}
-@font-face {
-    src: url("./fonts/MerriweatherSans-LightItalic.ttf") format("truetype");
-    font-family: $fontFamily;
-    font-weight: 300;
-    font-style: italic;
-}
-@font-face {
-    src: url("./fonts/MerriweatherSans-Regular.ttf") format("truetype");
-    font-family: $fontFamily;
-    font-weight: 400;
-}
-@font-face {
-    src: url("./fonts/MerriweatherSans-RegularItalic.ttf") format("truetype");
-    font-family: $fontFamily;
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    src: url("./fonts/MerriweatherSans-Medium.ttf") format("truetype");
-    font-family: $fontFamily;
-    font-weight: 500;
-}
-@font-face {
-    src: url("./fonts/MerriweatherSans-MediumItalic.ttf") format("truetype");
-    font-family: $fontFamily;
-    font-weight: 500;
-    font-style: italic;
-}
-@font-face {
-    font-family: $fontFamily;
-    src: url("./fonts/MerriweatherSans-SemiBold.ttf") format("truetype");
-    font-weight: 600;
-}
-@font-face {
-    font-family: $fontFamily;
-    src: url("./fonts/MerriweatherSans-SemiBoldItalic.ttf") format("truetype");
-    font-weight: 600;
-    font-style: italic;
-}
-@font-face {
-    font-family: $fontFamily;
-    src: url("./fonts/MerriweatherSans-Bold.ttf") format("truetype");
-    font-weight: 700;
-}
-@font-face {
-    font-family: $fontFamily;
-    src: url("./fonts/MerriweatherSans-BoldItalic.ttf") format("truetype");
-    font-weight: 700;
-    font-style: italic;
-}
-@font-face {
-    font-family: $fontFamily;
-    src: url("./fonts/MerriweatherSans-ExtraBold.ttf") format("truetype");
-    font-weight: 800;
-}
-@font-face {
-    font-family: $fontFamily;
-    src: url("./fonts/MerriweatherSans-ExtraBoldItalic.ttf") format("truetype");
-    font-weight: 800;
-    font-style: italic;
-}
+@import "./variables";
+@import "./fonts";
 
 html {
     box-sizing: border-box;
@@ -96,5 +23,3 @@ html {
 //sections
 
 //components
-
-@import "./variables";
