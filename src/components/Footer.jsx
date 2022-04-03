@@ -3,7 +3,7 @@ function Footer() {
     <footer className="footer">
         <div className="footer-container">
             <div className="footer-text">
-                Copyright © {new Date().getFullYear()} Parches
+               <span>Parches</span> © {new Date().getFullYear()} - Todos los derechos reservados.
             </div>
         </div>
     </footer>

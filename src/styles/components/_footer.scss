@@ -8,7 +8,14 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 100%;
         max-width: $maxPageWidth;
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        color: $textBlackColor;
+        .footer-text{
+            font-size: 16px;
+            font-family: $fontFamily;
+        }
     }
 }
