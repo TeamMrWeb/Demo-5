@@ -1,4 +1,5 @@
 import figure from '../assets/figure.png';
+import Button from '../components/Button';
 
 export default function Home() {
     return (
@@ -7,9 +8,7 @@ export default function Home() {
                 <img className="figure" src={figure} alt="figure" />
                 <div className="info">
                     <h2 className="row-card__title">El entrenamiento más <b className="row-card__title--color">completo</b> al mejor <b className="row-card__title--color">precio</b></h2>
-                    <button className="button">
-                        <a className="button__link" href="#/">Únete ahora!</a>
-                    </button>
+                    <Button text="Únete ahora!" />
                 </div>
             </div>
         </section>

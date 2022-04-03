@@ -32,27 +32,6 @@
                    color: $primaryColor;
                 }
             }
-            .button {
-                background-color: $primaryColor;
-                border-radius: 300px;
-                border: none;
-                font-size: 30px;
-                text-transform: uppercase;
-                padding: 20px;
-                font-family: $fontFamily;
-                font-weight: 600;
-                cursor: pointer;
-                &:hover {
-                    background: linear-gradient(rgba(0, 0, 0, 0.882), rgba(0, 0, 0, 0.897));
-                    .button__link {
-                        color: $primaryColor;
-                    }
-                }
-                .button__link {
-                    color: white;
-                    text-decoration: none;
-                }
-            }
         }
     }
 }
