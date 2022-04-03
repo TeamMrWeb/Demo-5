@@ -110,15 +110,68 @@ html body #root {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
   width: 100%;
   height: 100vh;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
-.home .row-card {
+.home .backgrounds-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 400vw;
+  height: 100vh;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.home .backgrounds-container .background {
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
+}
+
+.home .backgrounds-container .background:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg2.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg2.jpg") no-repeat fixed center center/cover;
+}
+
+.home .backgrounds-container .background:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg3.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg3.jpg") no-repeat fixed center center/cover;
+}
+
+.home .backgrounds-container .background:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg4.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg4.jpg") no-repeat fixed center center/cover;
+}
+
+.home .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  z-index: 1;
+}
+
+.home .welcome .row-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -131,22 +184,21 @@ html body #root {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   width: 100%;
-  max-width: 1400px;
 }
 
-.home .row-card .figure {
+.home .welcome .row-card .figure {
   width: 100%;
   max-width: 626px;
 }
 
-.home .row-card .info {
+.home .welcome .row-card .info {
   color: #FFFFFF;
   width: 100%;
   max-width: 600px;
   text-align: center;
 }
 
-.home .row-card .info .row-card__title {
+.home .welcome .row-card .info .row-card__title {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 800;
@@ -154,27 +206,122 @@ html body #root {
 }
 
 @media screen and (min-width: 600px) {
-  .home .row-card .info .row-card__title {
+  .home .welcome .row-card .info .row-card__title {
     font-size: calc(30px + 20 * (100vw - 600px) / 600);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .home .row-card .info .row-card__title {
+  .home .welcome .row-card .info .row-card__title {
     font-size: 50px;
   }
 }
 
-.home .row-card .info .row-card__title .row-card__title--color {
+.home .welcome .row-card .info .row-card__title .row-card__title--color {
   font-style: normal;
   color: #F77B05;
+}
+
+.home .welcome .row-card .info .button {
+  background-color: #F77B05;
+  border-radius: 300px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 20px;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media screen and (min-width: 600px) {
+  .home .welcome .row-card .info .button {
+    font-size: calc(20px + 10 * (100vw - 600px) / 600);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .home .welcome .row-card .info .button {
+    font-size: 30px;
+  }
+}
+
+.home .welcome .row-card .info .button:hover {
+  background-color: #C82D0B;
+}
+
+.home .welcome .row-card .info .button .button__link {
+  color: white;
+  text-decoration: none;
+}
+
+.home .welcome .slideshow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: -170px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.home .welcome .slideshow .slideshow__button {
+  border: none;
+  background-color: #f77b05;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #FFFFFF;
+  font-size: 40px;
+  border-radius: 300px;
+  cursor: pointer;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.home .welcome .slideshow .slideshow__button:hover {
+  background-color: #C82D0B;
+}
+
+.home .welcome .slideshow .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 240px;
+}
+
+.home .welcome .slideshow .list .list__item {
+  background-color: #F77B05;
+  width: 30px;
+  height: 30px;
+  border-radius: 300px;
+  cursor: pointer;
+}
+
+.home .welcome .slideshow .list .list__item.active {
+  background-color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 1226px) {
   .home {
     padding: 0 20px;
   }
-  .home .row-card {
+  .home .welcome .row-card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -183,8 +330,19 @@ html body #root {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  .home .row-card .figure {
+  .home .welcome .row-card .figure {
     width: 70%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .home .welcome .slideshow {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .home .welcome .slideshow .slideshow__button {
+    display: none;
   }
 }
 
