@@ -19,14 +19,17 @@
         height: 100vh;
         position: relative;
         z-index: 1;
+        overflow-x: hidden;
         .backgrounds-container {
             display: flex;
+            white-space: nowrap;
             position: absolute;
             left: 0;
             top: 0;
             z-index: 0;
             width: 400vw;
-            height: 100vh;
+            width: 100%;
+            height: 100vh; 
             transition: all 1s;
             .background {
                 width: 100%;
