@@ -181,8 +181,6 @@ html body #root {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   width: 100%;
 }
 
@@ -202,18 +200,18 @@ html body #root {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 800;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 @media screen and (min-width: 600px) {
   .home .welcome .row-card .info .row-card__title {
-    font-size: calc(30px + 20 * (100vw - 600px) / 600);
+    font-size: calc(20px + 20 * (100vw - 600px) / 600);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .home .welcome .row-card .info .row-card__title {
-    font-size: 50px;
+    font-size: 40px;
   }
 }
 
@@ -322,20 +320,23 @@ html body #root {
     padding: 0 20px;
   }
   .home .welcome .row-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   .home .welcome .row-card .figure {
     width: 70%;
+    max-width: 400px;
   }
 }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {
+  .home .welcome .row-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .home .welcome .slideshow {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -356,15 +357,6 @@ html body #root {
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 600;
   cursor: pointer;
-}
-
-.button:hover {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.882)), to(rgba(0, 0, 0, 0.897)));
-  background: linear-gradient(rgba(0, 0, 0, 0.882), rgba(0, 0, 0, 0.897));
-}
-
-.button:hover .button__link {
-  color: #F77B05;
 }
 
 .button .button__link {

@@ -43,7 +43,6 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            flex-wrap: wrap;
             width: 100%;
             .figure {
                 width: 100%;
@@ -58,7 +57,7 @@
                     text-transform: uppercase;
                     font-style: italic;
                     font-weight: 800;
-                    @include fluid-type(font-size, 600px, 1200px, 30px, 50px);
+                    @include fluid-type(font-size, 600px, 1200px, 20px, 40px);
                     .row-card__title--color {
                        font-style: normal;
                        color: $primaryColor;
@@ -135,10 +134,11 @@
         padding: 0 20px;
         .welcome {
             .row-card {
-                flex-direction: column;
                 justify-content: center;
+                
                 .figure {
                     width: 70%;
+                    max-width: 400px;
                 }
             }
         }
@@ -148,6 +148,9 @@
 @media screen and (min-width: 320px) and (max-width: 500px) {
     .home {
         .welcome {
+            .row-card {
+                flex-direction: column;
+            }
             .slideshow {
                 justify-content: center;
                 .slideshow__button {
