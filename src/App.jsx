@@ -1,5 +1,5 @@
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import Footer from "./components/Footer"
 import NotFound from "./pages/NotFound";
 export default function App() {

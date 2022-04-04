@@ -104,6 +104,32 @@ html body #root {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+}
+
+.home .welcome {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -112,13 +138,11 @@ html body #root {
           align-items: center;
   width: 100%;
   height: 100vh;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   position: relative;
   z-index: 1;
 }
 
-.home .backgrounds-container {
+.home .welcome .backgrounds-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,43 +156,27 @@ html body #root {
   transition: all 1s;
 }
 
-.home .backgrounds-container .background {
+.home .welcome .backgrounds-container .background {
   width: 100%;
+  min-width: 100vw;
   height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
 }
 
-.home .backgrounds-container .background:nth-child(1) {
+.home .welcome .backgrounds-container .background:nth-child(1) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg2.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg2.jpg") no-repeat fixed center center/cover;
 }
 
-.home .backgrounds-container .background:nth-child(2) {
+.home .welcome .backgrounds-container .background:nth-child(2) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg3.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg3.jpg") no-repeat fixed center center/cover;
 }
 
-.home .backgrounds-container .background:nth-child(3) {
+.home .welcome .backgrounds-container .background:nth-child(3) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg4.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg4.jpg") no-repeat fixed center center/cover;
-}
-
-.home .welcome {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  max-width: 1400px;
-  position: relative;
-  z-index: 1;
 }
 
 .home .welcome .row-card {
@@ -182,6 +190,8 @@ html body #root {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
+  max-width: 1300px;
+  position: relative;
 }
 
 .home .welcome .row-card .figure {
@@ -263,7 +273,7 @@ html body #root {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  bottom: -170px;
+  bottom: 50px;
   width: 100%;
   max-width: 550px;
 }
@@ -316,17 +326,20 @@ html body #root {
 }
 
 @media screen and (min-width: 320px) and (max-width: 1226px) {
-  .home {
-    padding: 0 20px;
-  }
   .home .welcome .row-card {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 0 20px;
   }
   .home .welcome .row-card .figure {
     width: 70%;
     max-width: 400px;
+  }
+  .home .welcome .slideshow {
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
 }
 

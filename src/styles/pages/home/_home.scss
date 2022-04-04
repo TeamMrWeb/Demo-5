@@ -1,49 +1,56 @@
+@import "./sections/welcome";
+
 .home {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    .backgrounds-container {
-        display: flex;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 0;
-        width: 400vw;
-        height: 100vh;
-        transition: all 1s;
-        .background {
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg.jpg') no-repeat fixed center center / cover;
-            &:nth-child(1) {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg2.jpg') no-repeat fixed center center / cover;
-            }
-            &:nth-child(2) {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg3.jpg') no-repeat fixed center center / cover;
-            }
-            &:nth-child(3) {
-                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg4.jpg') no-repeat fixed center center / cover;
-            }
-        }
-    }
     .welcome {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         width: 100%;
-        max-width: 1400px;
+        height: 100vh;
         position: relative;
         z-index: 1;
+        .backgrounds-container {
+            display: flex;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 0;
+            width: 400vw;
+            height: 100vh;
+            transition: all 1s;
+            .background {
+                width: 100%;
+                min-width: 100vw;
+                height: 100%;
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg.jpg') no-repeat fixed center center / cover;
+                &:nth-child(1) {
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg2.jpg') no-repeat fixed center center / cover;
+                }
+                &:nth-child(2) {
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg3.jpg') no-repeat fixed center center / cover;
+                }
+                &:nth-child(3) {
+                    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../assets/home-bg4.jpg') no-repeat fixed center center / cover;
+                }
+            }
+        }
         .row-card {
             display: flex;
             align-items: center;
             justify-content: space-between;
             width: 100%;
+            max-width: $maxPageWidth;
+            position: relative;
             .figure {
                 width: 100%;
                 max-width: 626px;
@@ -88,7 +95,7 @@
             display: flex;
             justify-content: space-between;
             position: absolute;
-            bottom: -170px;
+            bottom: 50px;
             width: 100%;
             max-width: 550px;
             .slideshow__button {
@@ -131,15 +138,18 @@
 
 @media screen and (min-width: 320px) and (max-width: 1226px) {
     .home {
-        padding: 0 20px;
         .welcome {
             .row-card {
                 justify-content: center;
-                
+                padding: 0 20px;
                 .figure {
                     width: 70%;
                     max-width: 400px;
                 }
+            }
+            .slideshow {
+                padding: 0 20px;
+                box-sizing: border-box;
             }
         }
     }
