@@ -1,7 +1,7 @@
 import { useState } from "react"
-import figure from '../../../assets/figure.png'
-import Button from "../../../components/Button"
 import { useSlideShow } from "../../../hooks/useSlideShow"
+import Button from "../../../components/Button"
+import figure from '../../../assets/figure.png'
 
 export default function Welcome({backgroundContainer}) {
     const [backgroundImg, setBackgroundImg] = useState(0)
@@ -18,7 +18,7 @@ export default function Welcome({backgroundContainer}) {
             <div className="row-card">
                 <img className="figure" src={figure} alt="figure" />
                 <div className="info">
-                    <h2 className="row-card__title">El entrenamiento más <b className="row-card__title--color">completo</b> al mejor <b className="row-card__title--color">precio</b></h2>
+                    <h2 className="row-card__title">El entrenamiento más <b className="title-color">completo</b> al mejor <b className="title-color">precio</b></h2>
                     <Button text="Únete ahora!" />
                 </div>
             </div>

@@ -7,4 +7,4 @@ function Card({title, paragraph}) {
     )
 }
   
-  export default Card
+export default Card

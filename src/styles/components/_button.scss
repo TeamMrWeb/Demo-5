@@ -2,12 +2,17 @@
     background-color: $primaryColor;
     border-radius: 300px;
     border: none;
-    font-size: 30px;
+    @include fluid-type(font-size, 600px, 1200px, 20px, 30px);
     text-transform: uppercase;
     padding: 20px;
     font-family: $fontFamily;
     font-weight: 600;
+    font-style: italic;
     cursor: pointer;
+    transition: all 1s;
+    &:hover {
+        background-color: #C82D0B;
+    }
     .button__link {
         color: white;
         text-decoration: none;

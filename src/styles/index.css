@@ -100,29 +100,12 @@ html body #root {
   height: 100%;
 }
 
-.home {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  position: relative;
-  z-index: 1;
+html body .title-color {
+  color: #F77B05;
+  font-style: normal;
 }
 
-.home .welcome {
+.welcome {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +126,7 @@ html body #root {
   overflow-x: hidden;
 }
 
-.home .welcome .backgrounds-container {
+.welcome .backgrounds-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -159,7 +142,7 @@ html body #root {
   transition: all 1s;
 }
 
-.home .welcome .backgrounds-container .background {
+.welcome .backgrounds-container .background {
   width: 100%;
   min-width: 100vw;
   height: 100%;
@@ -167,22 +150,22 @@ html body #root {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg.jpg") no-repeat fixed center center/cover;
 }
 
-.home .welcome .backgrounds-container .background:nth-child(1) {
+.welcome .backgrounds-container .background:nth-child(1) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg2.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg2.jpg") no-repeat fixed center center/cover;
 }
 
-.home .welcome .backgrounds-container .background:nth-child(2) {
+.welcome .backgrounds-container .background:nth-child(2) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg3.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg3.jpg") no-repeat fixed center center/cover;
 }
 
-.home .welcome .backgrounds-container .background:nth-child(3) {
+.welcome .backgrounds-container .background:nth-child(3) {
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/home-bg4.jpg") no-repeat fixed center center/cover;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/home-bg4.jpg") no-repeat fixed center center/cover;
 }
 
-.home .welcome .row-card {
+.welcome .row-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -197,19 +180,19 @@ html body #root {
   position: relative;
 }
 
-.home .welcome .row-card .figure {
+.welcome .row-card .figure {
   width: 100%;
   max-width: 626px;
 }
 
-.home .welcome .row-card .info {
+.welcome .row-card .info {
   color: #FFFFFF;
   width: 100%;
   max-width: 600px;
   text-align: center;
 }
 
-.home .welcome .row-card .info .row-card__title {
+.welcome .row-card .info .row-card__title {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 800;
@@ -217,58 +200,18 @@ html body #root {
 }
 
 @media screen and (min-width: 600px) {
-  .home .welcome .row-card .info .row-card__title {
+  .welcome .row-card .info .row-card__title {
     font-size: calc(20px + 20 * (100vw - 600px) / 600);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .home .welcome .row-card .info .row-card__title {
+  .welcome .row-card .info .row-card__title {
     font-size: 40px;
   }
 }
 
-.home .welcome .row-card .info .row-card__title .row-card__title--color {
-  font-style: normal;
-  color: #F77B05;
-}
-
-.home .welcome .row-card .info .button {
-  background-color: #F77B05;
-  border-radius: 300px;
-  border: none;
-  font-size: 20px;
-  text-transform: uppercase;
-  padding: 20px;
-  font-family: "Merriweather Sans", sans-serif;
-  font-weight: 600;
-  cursor: pointer;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-@media screen and (min-width: 600px) {
-  .home .welcome .row-card .info .button {
-    font-size: calc(20px + 10 * (100vw - 600px) / 600);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .home .welcome .row-card .info .button {
-    font-size: 30px;
-  }
-}
-
-.home .welcome .row-card .info .button:hover {
-  background-color: #C82D0B;
-}
-
-.home .welcome .row-card .info .button .button__link {
-  color: white;
-  text-decoration: none;
-}
-
-.home .welcome .slideshow {
+.welcome .slideshow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,7 +224,7 @@ html body #root {
   max-width: 550px;
 }
 
-.home .welcome .slideshow .slideshow__button {
+.welcome .slideshow .slideshow__button {
   border: none;
   background-color: #f77b05;
   -webkit-transition: all 1s;
@@ -295,11 +238,11 @@ html body #root {
           box-sizing: border-box;
 }
 
-.home .welcome .slideshow .slideshow__button:hover {
+.welcome .slideshow .slideshow__button:hover {
   background-color: #C82D0B;
 }
 
-.home .welcome .slideshow .list {
+.welcome .slideshow .list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -316,7 +259,7 @@ html body #root {
   max-width: 240px;
 }
 
-.home .welcome .slideshow .list .list__item {
+.welcome .slideshow .list .list__item {
   background-color: #F77B05;
   width: 30px;
   height: 30px;
@@ -324,7 +267,7 @@ html body #root {
   cursor: pointer;
 }
 
-.home .welcome .slideshow .list .list__item.active {
+.welcome .slideshow .list .list__item.active {
   background-color: white;
 }
 
@@ -361,6 +304,66 @@ html body #root {
   .home .welcome .slideshow .slideshow__button {
     display: none;
   }
+}
+
+.activities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  width: 100%;
+  height: 100%;
+  padding: 100px;
+  background-color: #0F141C;
+}
+
+.activities .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  z-index: 1;
 }
 
 .gallery-section {
@@ -438,12 +441,31 @@ html body #root {
   background-color: #F77B05;
   border-radius: 300px;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   padding: 20px;
   font-family: "Merriweather Sans", sans-serif;
   font-weight: 600;
+  font-style: italic;
   cursor: pointer;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media screen and (min-width: 600px) {
+  .button {
+    font-size: calc(20px + 10 * (100vw - 600px) / 600);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .button {
+    font-size: 30px;
+  }
+}
+
+.button:hover {
+  background-color: #C82D0B;
 }
 
 .button .button__link {
@@ -488,5 +510,17 @@ html body #root {
 .footer .footer-container .footer-text {
   font-size: 16px;
   font-family: "Merriweather Sans", sans-serif;
+}
+
+.card {
+  width: 300px;
+  height: 400px;
+  background-color: red;
+}
+
+.divisor-line {
+  width: 100%;
+  height: 100px;
+  background: #0f141c;
 }
 /*# sourceMappingURL=index.css.map */

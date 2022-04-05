@@ -1,10 +1,7 @@
-import { useState, useRef } from "react";
-import { useSlideShow } from "../../hooks/useSlideShow";
-import Button from '../../components/Button';
-import Card from "../../components/Card";
+import { useRef } from "react";
+import Activities from "./sections/Activities";
 import Welcome from "./sections/Welcome";
-
-// Gallery images
+import DivisorLine from "../../components/DivisorLine";
 import Gallery from "../../components/Gallery";
 import image1 from "../../assets/gallery/image1.jpg";
 import image2 from "../../assets/gallery/image2.jpg";
@@ -20,14 +17,8 @@ export default function Home() {
     return (
         <section className="home" ref={backgroundContainer}>
             <Welcome backgroundContainer={backgroundContainer} />
-            <div className="activities">
-                <div>
-                </div>
-                <div className="cards">
-                    <Card paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?" />
-                </div>
-                <Button text="Conocer más" />
-            </div>
+            <Activities />
+            <DivisorLine firstColor={"#242a35"} secondColor={"#0f141c"} />
             <Gallery images={galleryImages} />
         </section>
     )

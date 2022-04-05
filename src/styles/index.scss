@@ -17,6 +17,10 @@ html {
         #root {
             height: 100%;
         }
+        .title-color {
+            color: $primaryColor;
+            font-style: normal;
+        }
     }
 }
 
@@ -29,3 +33,5 @@ html {
 @import "./components/gallery";
 @import "./components/button";
 @import "./components/footer";
+@import "./components/card";
+@import "./components/divisorLine";
