@@ -1,11 +1,49 @@
 .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 300px;
     height: 400px;
-    background-color: red;
-    .card__title {
-
+    position: relative;
+    z-index: 2;
+    .card-background{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        .card__image{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
-    .card__paragraph {
-
+    .card-filter{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .card-content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        .card__title {
+            font-size: 24px;
+            color: $whiteColor;
+            font-weight: bold;
+        }
+        .card__paragraph {
+            font-size: 14px;
+            color: $whiteColor;
+            font-weight: bold;
+        }
     }
 }
