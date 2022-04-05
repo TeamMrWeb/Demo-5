@@ -325,6 +325,7 @@ html body .title-color {
   height: 100%;
   padding: 100px;
   background-color: #0F141C;
+  position: relative;
 }
 
 .activities .cards {
@@ -342,6 +343,71 @@ html body .title-color {
   gap: 50px;
   width: 100%;
   max-width: 1300px;
+  position: relative;
+  z-index: 1;
+}
+
+.activities .activities__image {
+  position: absolute;
+  top: 50;
+  left: 10%;
+  z-index: 0;
+}
+
+.plans {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #242A35;
+  border-top: 1px solid red;
+  border-bottom: 1px solid red;
+}
+
+.plans .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  padding: 100px;
+}
+
+.plans .content .header {
+  color: #FFFFFF;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.plans .content .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 50px;
 }
 
 .home {

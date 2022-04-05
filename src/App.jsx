@@ -6,13 +6,13 @@ import About from "./pages/About";
 
 export default function App() {
     return (
-        <div className="app">
+        <main className="app">
             <Routes>
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/nosotros" element={<About />}/>
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
-        </div>
+        </main>
     )
 }
