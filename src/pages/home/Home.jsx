@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import Activities from "./sections/Activities";
 import Welcome from "./sections/Welcome";
+import Plans from "./sections/Plans";
 import DivisorLine from "../../components/DivisorLine";
 import Gallery from "../../components/Gallery";
 import image1 from "../../assets/gallery/image1.jpg";
@@ -9,7 +10,6 @@ import image3 from "../../assets/gallery/image3.jpg";
 import image4 from "../../assets/gallery/image4.jpg";
 import image5 from "../../assets/gallery/image5.jpg";
 import image6 from "../../assets/gallery/image6.jpg";
-import Plans from "./sections/Plans";
 
 export default function Home() {
     const galleryImages = [image1, image2, image3, image4, image5, image6];

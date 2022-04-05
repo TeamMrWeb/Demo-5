@@ -367,8 +367,6 @@ html body .title-color {
   width: 100%;
   height: 100%;
   background-color: #242A35;
-  border-top: 1px solid red;
-  border-bottom: 1px solid red;
 }
 
 .plans .content {
@@ -408,6 +406,79 @@ html body .title-color {
       -ms-flex-align: center;
           align-items: center;
   gap: 50px;
+}
+
+.plans .content .cards .plan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 350px;
+  height: 100%;
+  padding: 20px 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #1F2025;
+}
+
+.plans .content .cards .plan .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.plans .content .cards .plan .header .fa-solid {
+  color: #F77B05;
+}
+
+.plans .content .cards .plan .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.plans .content .cards .plan .list .list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  font-size: 16px;
+}
+
+.plans .content .cards .plan .list .list__item .fa-solid {
+  color: #F77B05;
+}
+
+.plans .content .cards .plan .list .list__item .list__text {
+  color: #D1D2D0;
 }
 
 .home {

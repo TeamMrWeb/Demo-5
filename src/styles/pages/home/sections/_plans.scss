@@ -5,14 +5,10 @@
     width: 100%;
     height: 100%;
     background-color: $blackColor;
-    border-top: 1px solid red;
-    border-bottom: 1px solid red;
     .content {
         display: flex;
         flex-direction: column;
-        // align-items: center;
         justify-content: center;
-        // width: max-content;
         width: 100%;
         max-width: $maxPageWidth;
         height: 100%;
@@ -22,9 +18,6 @@
             font-size: 30px;
             text-transform: uppercase;
             font-style: italic;
-            .header__subtitle {
-
-            }
         }
         .cards {
             display: flex;
@@ -32,6 +25,46 @@
             justify-content: center;
             align-items: center;
             gap: 50px;
+            .plan {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                width: 100%;
+                max-width: 350px;
+                height: 100%;
+                padding: 20px 40px;
+                box-sizing: border-box;
+                background-color: #1F2025;
+                .header {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    .fa-solid {
+                        color: $primaryColor;
+                    }
+                }
+                .list {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    padding: 0;
+                    list-style: none;
+                    .list__item {
+                        display: flex;
+                        gap: 20px;
+                        font-size: 16px;
+                        .fa-solid {
+                            color: $primaryColor;
+                        }
+                        .list__text {
+                            color: $textColor;
+                        }
+                    }
+                }
+            }
         }
     }
 }

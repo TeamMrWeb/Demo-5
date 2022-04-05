@@ -1,5 +1,6 @@
-function Card({title, paragraph, backgroundImage, backgroundColor}) {
+export default function Card({title, paragraph, backgroundImage, backgroundColor}) {
     const opacity = !backgroundImage? 1 : 0.5;
+    
     return (
         <div className="card">
             {
@@ -16,5 +17,3 @@ function Card({title, paragraph, backgroundImage, backgroundColor}) {
         </div>
     )
 }
-
-export default Card
