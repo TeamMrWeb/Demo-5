@@ -2,8 +2,8 @@ export default function Gallery({ images }) {
   return (
     <section className="gallery-section">
         <div className="gallery-header">
-            <h1 className="gallery__title">Galeria del gimnasio</h1>
-            <p className="gallery__description">Fotos del gimnasio</p>
+            <h1 className="gallery__title title-color">Nuestra galeria</h1>
+            <h4 className="gallery__subtitle">Fotos del gimnasio</h4>
         </div>
         <div className="gallery-container">
             {images.map((image, index) => (
