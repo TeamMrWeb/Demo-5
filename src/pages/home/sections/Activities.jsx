@@ -12,17 +12,26 @@ export default function Activities() {
                     backgroundImage={bodyshaping}
                     backgroundColor={"#f5f5f5"}
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
+                    buttonEnabled={true}
+                    buttonText={"Descubrir"}
+                    buttonLink={"/clases/bodyshaping"}
                 />
                 <Card
                     title={"Extreme fitness"}
                     backgroundImage={bodyshaping}
                     backgroundColor={"#939393"}
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
+                    buttonEnabled={true}
+                    buttonText={"Descubrir"}
+                    buttonLink={"/clases/extreme_fitness"}
                 />
                 <Card
                     title={"Yoga classis"}
                     backgroundColor={"#181818"}
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
+                    buttonEnabled={true}
+                    buttonText={"Descubrir"}
+                    buttonLink={"/clases/yoga_classis"}
                 />
             </div>
             <Button text="Conocer más" />
