@@ -1,3 +1,5 @@
+import figureGray from '../../../assets/Home/figureGray.png'
+
 export default function Plans() {
     const plans = [
         {
@@ -76,6 +78,7 @@ export default function Plans() {
                     }
                 </div>
             </div>
+            <img className="figureGray" src={figureGray} alt="figure" />
         </div>
     )
 }
