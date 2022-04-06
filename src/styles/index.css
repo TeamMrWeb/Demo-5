@@ -100,7 +100,11 @@ html body #root {
   height: 100%;
 }
 
-html body .title-color {
+html body .app {
+  position: relative;
+}
+
+html body .app .title-color {
   color: #F77B05;
   font-style: normal;
 }
@@ -858,5 +862,179 @@ html body .title-color {
   width: 100%;
   height: 100px;
   background: #0f141c;
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.268);
+}
+
+.navbar.active {
+  background-color: #242A35;
+  -webkit-box-shadow: 0 0px 20px 10px #00000031;
+          box-shadow: 0 0px 20px 10px #00000031;
+}
+
+.navbar .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.navbar .content .logo {
+  width: 50px;
+  height: 50px;
+  background-color: red;
+  border-radius: 300px;
+}
+
+.navbar .content .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #FFFFFF;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navbar .content .list .list__item--home {
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar .content .list .list__item--home .home-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+}
+
+.navbar .content .list .list__item--home .dropdown {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 40px;
+  background-color: #0F141C;
+}
+
+.navbar .content .list .list__item--home .dropdown.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar .content .list .list__item--home .dropdown .dropdown__link {
+  cursor: pointer;
+}
+
+.navbar .content .list .list__item--home .dropdown .dropdown__link:hover {
+  color: #F77B05;
+}
+
+.navbar .content .list .list__link {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+.navbar .content .list .list__link:hover {
+  color: #F77B05;
+}
+
+.navbar .content .list .list__link .list__item {
+  cursor: pointer;
+}
+
+.navbar .content .navbar__button {
+  display: none;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .navbar .content {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0 20px;
+  }
+  .navbar .content .list {
+    display: none;
+  }
+  .navbar .content .list.active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    width: 100%;
+    padding: 20px 0;
+    background-color: #242A35;
+    -webkit-box-shadow: 0 0px 20px 10px #00000031;
+            box-shadow: 0 0px 20px 10px #00000031;
+  }
+  .navbar .content .navbar__button {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 300px;
+    background-color: #14171a00;
+    border: none;
+    cursor: pointer;
+  }
+  .navbar .content .navbar__button .fas {
+    color: #F77B05;
+    font-size: 30px;
+  }
 }
 /*# sourceMappingURL=index.css.map */

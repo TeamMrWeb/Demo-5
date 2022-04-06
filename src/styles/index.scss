@@ -17,9 +17,12 @@ html {
         #root {
             height: 100%;
         }
-        .title-color {
-            color: $primaryColor;
-            font-style: normal;
+        .app {
+            position: relative;
+            .title-color {
+                color: $primaryColor;
+                font-style: normal;
+            }
         }
     }
 }
@@ -35,3 +38,4 @@ html {
 @import "./components/footer";
 @import "./components/card";
 @import "./components/divisorLine";
+@import "./components/navbar";
