@@ -109,6 +109,10 @@ html body .app .title-color {
   font-style: normal;
 }
 
+html body .app .text-white {
+  color: #FFFFFF;
+}
+
 .welcome {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -638,6 +642,139 @@ html body .app .title-color {
   background: linear-gradient(180deg, #232935 0%, #1f2025 100%);
   width: 100%;
   height: 100%;
+}
+
+.about-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  width: 100%;
+  background-color: #242A35;
+}
+
+.about-section .about-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 1300px;
+  width: 100%;
+  height: 100%;
+}
+
+.about-section .about-container .about__title {
+  font-size: 32px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.about-section .about-container .about__subtitle {
+  color: #60636C;
+}
+
+.about-section .about-container .about__description {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.about-section .about-container .about-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.about-section .about-container .about-header .about-left {
+  height: 100%;
+  width: 100%;
+}
+
+.about-section .about-container .about-header .about-left .about__image {
+  width: 100%;
+  height: 100%;
+}
+
+.about-section .about-container .about-header .about-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.about-section .about-container .about-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+  width: 100%;
+  height: 100%;
+}
+
+.about-section .about-container .about-content .about-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 .gallery-section {
