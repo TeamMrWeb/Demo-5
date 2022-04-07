@@ -6,6 +6,7 @@ import bodyshaping from "../../../assets/Activities/bodyshaping.jpg"
 export default function Activities() {
     return (
         <div className="activities">
+            <div name="activities" className="scroll"></div>
             <div className="cards">
                 <Card
                     title={"Body shaping"}

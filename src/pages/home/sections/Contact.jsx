@@ -24,6 +24,7 @@ export default function Contact() {
 
     return (
         <div className="contact">
+            <div name="contact" className="scroll"></div>
             <div className="content">
                 <div className="info">
                     <h1 className="title">Información de <b className="title-color">contacto</b></h1>

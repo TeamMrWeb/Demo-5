@@ -1,6 +1,7 @@
 export default function Gallery({ images }) {
   return (
     <section className="gallery-section">
+        <div name="gallery" className="scroll"></div>
         <div className="gallery-header">
             <h1 className="gallery__title title-color">Nuestra galeria</h1>
             <h4 className="gallery__subtitle">Fotos del gimnasio</h4>

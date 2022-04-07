@@ -9,6 +9,7 @@ export default function Welcome({backgroundContainer}) {
 
     return (
         <div className="welcome">
+            <div name="welcome" className="scroll"></div>
             <div className="backgrounds-container" style={backgroundContainer.current && {transform: `translateX(${-backgroundImg * backgroundContainer.current.clientWidth }px)`}}>
                 <div className="background"></div>
                 <div className="background"></div>

@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from 'react-scroll'
+import logo from '../assets/Navbar/logo.png'
 
 export default function Navbar() {
     const [navbar, setNavbar] = useState(false)
@@ -19,7 +20,8 @@ export default function Navbar() {
 
     window.onclick = (event) => {
         console.log(event.target.className)
-        if(dropdown && event.target.className !== 'list__title' && event.target.className !== 'fa-solid fa-angle-down' && event.target.className !== 'dropdown__link' && event.target.className !== 'dropdown__item') {
+        if(document.getElementsByClassName('home-container')[0].contains(event.target)) dropdown ? setDropdown(false) : setDropdown(true)
+        if(dropdown && event.target.className !== 'list__title' && event.target.className !== 'fa-solid fa-angle-down' && event.target.className !== 'dropdown active' && event.target.className !== 'dropdown__link' && event.target.className !== 'dropdown__item') {
             setDropdown(false)
         }
     }
@@ -27,35 +29,35 @@ export default function Navbar() {
     return (
         <nav className={navbar ? "navbar active" : "navbar"}>
             <div className="content">
-                <img className="logo" src="#/" alt="logo" />
+                <img className="logo" src={logo} alt="logo" />
                 <ul className={burgerMenu ? "list active" : "list"}>
                     <li className="list__item--home list__item">
-                        <div className="home-container" onClick={() => {dropdown ? setDropdown(false) : setDropdown(true)}}>
+                        <div className="home-container">
                             <span className="list__title">Inicio</span>
-                            <i className="fa-solid fa-angle-down"></i>
+                            <i className={"fa-solid " + (dropdown ? "fa-angle-up" : "fa-angle-down")}></i>
                         </div>
                         <ul className={dropdown ? "dropdown active" : "dropdown"}>
-                            <Link activeClass="active" className="dropdown__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>
+                            <Link activeClass="active" className="dropdown__link" to="welcome" spy={true} isDynamic={true} smooth={true} duration={500}>
                                 <li className="dropdown__item">
                                     <span className="dropdown__title">Bienvenida</span>
                                 </li>
                             </Link>
-                            <Link activeClass="active" className="dropdown__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>
+                            <Link activeClass="active" className="dropdown__link" to="activities" offset={-200} spy={true} isDynamic={true} smooth={true} duration={500}>
                                 <li className="dropdown__item">
                                     <span className="dropdown__title">Actividades</span>
                                 </li>
                             </Link>
-                            <Link activeClass="active" className="dropdown__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>
+                            <Link activeClass="active" className="dropdown__link" to="gallery" offset={-100} spy={true} isDynamic={true} smooth={true} duration={500}>
                                 <li className="dropdown__item">
                                     <span className="dropdown__title">Galería</span>
                                 </li>
                             </Link>
-                            <Link activeClass="active" className="dropdown__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>
+                            <Link activeClass="active" className="dropdown__link" to="plans" spy={true} isDynamic={true} smooth={true} duration={500}>
                                 <li className="dropdown__item">
                                     <span className="dropdown__title">Planes</span>
                                 </li>
                             </Link>
-                            <Link activeClass="active" className="dropdown__link" to="home" spy={true} isDynamic={true} smooth={true} duration={500}>
+                            <Link activeClass="active" className="dropdown__link" to="contact" offset={20} spy={true} isDynamic={true} smooth={true} duration={500}>
                                 <li className="dropdown__item">
                                     <span className="dropdown__title">Contacto</span>
                                 </li>

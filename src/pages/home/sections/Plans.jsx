@@ -45,6 +45,7 @@ export default function Plans() {
 
     return (
         <div className="plans">
+            <div name="gallery" className="scroll"></div>
             <div className="content">
                 <header className="header">
                     <h1 className="title-color">planes</h1>
