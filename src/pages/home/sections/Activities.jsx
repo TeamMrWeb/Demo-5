@@ -1,10 +1,9 @@
 import Button from "../../../components/Button";
 import Card from "../../../components/Card";
-import image1 from "../../../assets/Activities/image1.png"
-import bodyshaping from "../../../assets/Activities/bodyshaping.jpg"
-import muscle from "../../../assets/Activities/muscle.png"
-import fitness from "../../../assets/Activities/fitness.png"
-import yoga from "../../../assets/Activities/yoga.png"
+import fitness from "../../../assets/Activities/fitness.png";
+import image1 from "../../../assets/Activities/image1.png";
+import muscle from "../../../assets/Activities/muscle.png";
+import yoga from "../../../assets/Activities/yoga.png";
 
 export default function Activities() {
     return (

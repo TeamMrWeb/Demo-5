@@ -657,7 +657,7 @@ html body .app .text-white {
   width: 100%;
 }
 
-.gallery-section {
+.gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,7 +677,7 @@ html body .app .text-white {
   position: relative;
 }
 
-.gallery-section .content {
+.gallery .content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,25 +693,25 @@ html body .app .text-white {
   height: 100%;
 }
 
-.gallery-section .content .gallery-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.gallery .content .gallery-container {
+  overflow-x: hidden;
   width: 1300px;
-  gap: 16px;
 }
 
-.gallery-section .content .gallery-container .gallery-img {
-  width: 356px;
-  height: 356px;
+.gallery .content .gallery-container .list {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (420px)[9];
+      grid-template-columns: repeat(9, 420px);
+  -ms-grid-rows: (420px)[2];
+      grid-template-rows: repeat(2, 420px);
+  gap: 16px;
+  padding: 0;
+}
+
+.gallery .content .gallery-container .list .gallery__item .gallery__image {
+  width: 420px;
+  height: 420px;
   -o-object-fit: cover;
      object-fit: cover;
 }
