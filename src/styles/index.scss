@@ -19,10 +19,6 @@ html {
         }
         .app {
             position: relative;
-            .title-color {
-                color: $primaryColor;
-                font-style: normal;
-            }
             .text-white {
                 color: $whiteColor;
             }
@@ -42,3 +38,4 @@ html {
 @import "./components/card";
 @import "./components/divisorLine";
 @import "./components/navbar";
+@import "./components/title";

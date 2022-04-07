@@ -1,3 +1,5 @@
+import Title from "../../../components/Title"
+
 export default function Contact() {
     const contact = [
         {
@@ -27,7 +29,7 @@ export default function Contact() {
             <div name="contact" className="scroll"></div>
             <div className="content">
                 <div className="info">
-                    <h1 className="title">Información de <b className="title-color">contacto</b></h1>
+                    <Title subtitle="Información de " subtitleColor="contacto"/>
                     <ul className="list">
                         {
                             contact.map((item, id) => {

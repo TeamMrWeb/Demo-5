@@ -1,4 +1,5 @@
 import figureGray from '../../../assets/Home/figureGray.png'
+import Title from "../../../components/Title"
 
 export default function Plans() {
     const plans = [
@@ -47,10 +48,7 @@ export default function Plans() {
         <div className="plans">
             <div name="gallery" className="scroll"></div>
             <div className="content">
-                <header className="header">
-                    <h1 className="title-color">planes</h1>
-                    <h4 className="header__subtitle">Conoce todos nuestros <span className="title-color">planes</span></h4>
-                </header>
+                <Title title="Nuestra " titleColor="membresía" subtitle="Conoce todos nuestros " subtitleColor="planes" />
                 <div className="cards">
                     {
                         plans.map((plan, id) => {
@@ -59,7 +57,7 @@ export default function Plans() {
                                     <header className="header">
                                         <i className={"fa-solid " + plan.icon}></i>
                                         <h2 className="header__title">{plan.title}</h2>
-                                        <span className="header__subtitle"><span className="title-color">{plan.price}</span>/ {plan.subtitle}</span>
+                                        <span className="header__subtitle"><span className="title-color">{plan.price}</span> / {plan.subtitle}</span>
                                     </header>
                                     <ul className="list">
                                         {

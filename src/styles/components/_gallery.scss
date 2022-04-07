@@ -7,38 +7,25 @@
     width: 100%;
     background-color: $blackColor;
     position: relative;
-    .gallery-header{
+    .content {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: center;
-        max-width: $maxPageWidth;
         width: 100%;
+        max-width: $maxPageWidth;
         height: 100%;
-        .gallery__title{
-            font-size: 42px;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-        .gallery__subtitle{
-            font-size: 32px;
-            font-weight: bold;
-            color: $whiteColor;
-            text-transform: uppercase;
-            font-style: italic;
-        }
-    }
-    .gallery-container{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        width: $maxPageWidth;
-        gap: 16px;
-        .gallery-img{
-            width: 356px;
-            height: 356px;
-            object-fit: cover;
+        .gallery-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            width: $maxPageWidth;
+            gap: 16px;
+            .gallery-img{
+                width: 356px;
+                height: 356px;
+                object-fit: cover;
+            }
         }
     }
 }

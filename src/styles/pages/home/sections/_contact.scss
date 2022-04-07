@@ -23,12 +23,6 @@
             flex-direction: column;
             gap: 20px;
             color: $textColor;
-            .title {
-                color: $whiteColor;
-                font-size: 30px;
-                text-transform: uppercase;
-                margin: 0;
-            }
             .list {
                 display: flex;
                 flex-direction: column;
