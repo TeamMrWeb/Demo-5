@@ -1,46 +1,28 @@
-import { useState } from "react"
-import { useCarousel } from "../hooks/useCarousel"
+import { useState } from "react";
+import { useSlideShow } from "../hooks/useSlideShow";
 
-export default function Carousel({images, selectedImage}) {
-    const [activeImage, setActiveImage] = useState(selectedImage)
-    const {selectCarouselImage, moveCarouselImage, moveToPositionAndDirection} = useCarousel(setActiveImage, images, selectedImage)
+export default function Carousel({backgroundContainer}) {
+    const [backgroundImg, setBackgroundImg] = useState(0)
+    const {changeBackgroundImg} = useSlideShow(backgroundImg, setBackgroundImg)
 
     return (
-        <div className="carousel-container">
-            <section className="carousel-section">
-                <div className="carousel">
-                    {
-                        images.map((image, id) => {
-                            return (
-                                <div className={activeImage === id ? "carousel__item active" : "carousel__item"} key={id} >
-                                    <img className="carousel__img" src={image.url} alt="carouselImage" />
-                                </div>
-                            )
-                        })
-                    }
-                    <div className="buttons">
-                        <button className="button" onClick={() => moveCarouselImage(-1)}><i className="fas fa-angle-left"></i></button>
-                        <button className="button" onClick={() => moveCarouselImage(1)}><i className="fas fa-angle-right"></i></button>
-                    </div>
-                </div>
-                <div className="wrapper">
-                    <button className="button" onClick={() => moveToPositionAndDirection()}><i className="fas fa-angle-left"></i></button>
-                    <div className="gallery-row" id="galleryRow">
-                        <ul className="list" id="galleryList">
-                            {
-                                images.map((image, id) => {
-                                    return (
-                                        <div className={activeImage === id ? "list__item active" : "list__item"} key={id}>
-                                            <img className="list__thumbnail" src={image.url} onClick={() => selectCarouselImage(id)} alt="galleryImage" />    
-                                        </div>
-                                    )
-                                })
-                            }
-                        </ul>
-                    </div>
-                    <button className="button" onClick={() => moveToPositionAndDirection("right")}><i className="fas fa-angle-right"></i></button>
-                </div>
-            </section>
+        <div className="carousel">
+            <div className="backgrounds-container" style={backgroundContainer.current && {transform: `translateX(${-backgroundImg * backgroundContainer.current.clientWidth }px)`}}>
+                <div className="background"></div>
+                <div className="background"></div>
+                <div className="background"></div>
+                <div className="background"></div>
+            </div>
+            <div className="slideshow">
+                <button className="slideshow__button left" onClick={() => changeBackgroundImg("left")}><i className="fa-solid fa-arrow-left"></i></button>
+                <ul className="list">
+                    <li className={backgroundImg === 0 ? "list__item active" : "list__item"} onClick={() => setBackgroundImg(0)}></li>
+                    <li className={backgroundImg === 1 ? "list__item active" : "list__item"} onClick={() => setBackgroundImg(1)}></li>
+                    <li className={backgroundImg === 2 ? "list__item active" : "list__item"} onClick={() => setBackgroundImg(2)}></li>
+                    <li className={backgroundImg === 3 ? "list__item active" : "list__item"} onClick={() => setBackgroundImg(3)}></li>
+                </ul>
+                <button className="slideshow__button right" onClick={() => changeBackgroundImg("right")}><i className="fa-solid fa-arrow-right"></i></button>
+            </div>
         </div>
     )
 }

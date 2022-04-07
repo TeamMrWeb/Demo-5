@@ -129,45 +129,6 @@ html body .app .text-white {
   overflow-x: hidden;
 }
 
-.welcome .backgrounds-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  white-space: nowrap;
-  position: absolute;
-  left: 0;
-  top: 0;
-  z-index: 0;
-  width: 400vw;
-  width: 100%;
-  height: 100vh;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-}
-
-.welcome .backgrounds-container .background {
-  width: 100%;
-  min-width: 100vw;
-  height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg.jpg") no-repeat fixed center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg.jpg") no-repeat fixed center center/cover;
-}
-
-.welcome .backgrounds-container .background:nth-child(1) {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg2.jpg") no-repeat fixed center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg2.jpg") no-repeat fixed center center/cover;
-}
-
-.welcome .backgrounds-container .background:nth-child(2) {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg3.jpg") no-repeat fixed center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg3.jpg") no-repeat fixed center center/cover;
-}
-
-.welcome .backgrounds-container .background:nth-child(3) {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg4.jpg") no-repeat fixed center center/cover;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg4.jpg") no-repeat fixed center center/cover;
-}
-
 .welcome .row-card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -181,6 +142,7 @@ html body .app .text-white {
   width: 100%;
   max-width: 1300px;
   position: relative;
+  z-index: 1;
 }
 
 .welcome .row-card .figure {
@@ -214,66 +176,6 @@ html body .app .text-white {
   }
 }
 
-.welcome .slideshow {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: absolute;
-  bottom: 50px;
-  width: 100%;
-  max-width: 550px;
-}
-
-.welcome .slideshow .slideshow__button {
-  border: none;
-  background-color: #f77b05;
-  -webkit-transition: all 1s;
-  transition: all 1s;
-  color: #FFFFFF;
-  font-size: 40px;
-  border-radius: 300px;
-  cursor: pointer;
-  padding: 0 10px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.welcome .slideshow .slideshow__button:hover {
-  background-color: #C82D0B;
-}
-
-.welcome .slideshow .list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  width: 100%;
-  max-width: 240px;
-}
-
-.welcome .slideshow .list .list__item {
-  background-color: #F77B05;
-  width: 30px;
-  height: 30px;
-  border-radius: 300px;
-  cursor: pointer;
-}
-
-.welcome .slideshow .list .list__item.active {
-  background-color: white;
-}
-
 @media screen and (min-width: 320px) and (max-width: 1226px) {
   .home .welcome .row-card {
     -webkit-box-pack: center;
@@ -285,11 +187,6 @@ html body .app .text-white {
     width: 70%;
     max-width: 400px;
   }
-  .home .welcome .slideshow {
-    padding: 0 20px;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {
@@ -298,14 +195,6 @@ html body .app .text-white {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-  }
-  .home .welcome .slideshow {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-  .home .welcome .slideshow .slideshow__button {
-    display: none;
   }
 }
 
@@ -1180,5 +1069,135 @@ html body .app .text-white {
 .header .header__subtitle .header__subtitle--color {
   color: #F77B05;
   font-style: normal;
+}
+
+.carousel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.carousel .backgrounds-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  white-space: nowrap;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  width: 400vw;
+  width: 100%;
+  height: 100vh;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.carousel .backgrounds-container .background {
+  width: 100%;
+  min-width: 100vw;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg.jpg") no-repeat fixed center center/cover;
+}
+
+.carousel .backgrounds-container .background:nth-child(1) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg2.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg2.jpg") no-repeat fixed center center/cover;
+}
+
+.carousel .backgrounds-container .background:nth-child(2) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg3.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg3.jpg") no-repeat fixed center center/cover;
+}
+
+.carousel .backgrounds-container .background:nth-child(3) {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/Home/home-bg4.jpg") no-repeat fixed center center/cover;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../assets/Home/home-bg4.jpg") no-repeat fixed center center/cover;
+}
+
+.carousel .slideshow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: absolute;
+  bottom: 50px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.carousel .slideshow .slideshow__button {
+  border: none;
+  background-color: #f77b05;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  color: #FFFFFF;
+  font-size: 40px;
+  border-radius: 300px;
+  cursor: pointer;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.carousel .slideshow .slideshow__button:hover {
+  background-color: #C82D0B;
+}
+
+.carousel .slideshow .list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 100%;
+  max-width: 240px;
+}
+
+.carousel .slideshow .list .list__item {
+  background-color: #F77B05;
+  width: 30px;
+  height: 30px;
+  border-radius: 300px;
+  cursor: pointer;
+}
+
+.carousel .slideshow .list .list__item.active {
+  background-color: white;
+}
+
+@media screen and (min-width: 320px) and (max-width: 1226px) {
+  .carousel .slideshow {
+    padding: 0 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .carousel .slideshow {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .carousel .slideshow .slideshow__button {
+    display: none;
+  }
 }
 /*# sourceMappingURL=index.css.map */
