@@ -1,20 +1,14 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Title from "./Title";
 
 export default function Gallery({images}) {
-    const [moveGallery, setMoveGallery] = useState()
+    const maxSectionWidth = 1299;
+    const gap = 10
+    const pixelsToMove = maxSectionWidth + gap;
     const list = useRef();
-    const gap = 16
-
-    useEffect(() => {
-        // list.current.style = `transform: translateX(-${moveGallery}px)`
-        moveGalleryPosition()
-    }, [moveGallery])
     
-    const moveGalleryPosition = () => {
-        const imageWidth = document.querySelector(".gallery__item").clientWidth
-        const imageTotalWidth = imageWidth + gap;
-        list.current.style = `transform: translateX(-${moveGallery + imageTotalWidth}px)`
+    const moveGalleryPosition = (pixels) => {
+        list.current.style = `transform: translateX(-${pixels}px)`
     }
 
     return (
@@ -30,9 +24,9 @@ export default function Gallery({images}) {
                             </li>
                         ))}
                     </ul>
-                    <button className="button" onClick={() => setMoveGallery()}>tocame1</button>
-                    <button className="button" onClick={() => setMoveGallery()}>tocame2</button>
-                    <button className="button" onClick={() => setMoveGallery()}>tocame3</button>
+                    <button className="button" onClick={() => moveGalleryPosition(0)}>tocame1</button>
+                    <button className="button" onClick={() => moveGalleryPosition(pixelsToMove)}>tocame2</button>
+                    <button className="button" onClick={() => moveGalleryPosition(pixelsToMove*2)}>tocame3</button>
                 </div>
             </div>
         </section>
