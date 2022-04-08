@@ -48,17 +48,17 @@ export default function Navbar() {
                             </Link>
                         </ul>
                     </li>
-                    <RouterLink className="list__link" to="#/">
+                    <RouterLink className="list__link" to="/actividades">
                         <li className="list__item">
                             <span className="list__title">Actividades</span>
                         </li>
                     </RouterLink>
-                    <RouterLink className="list__link" to="#/">
+                    <RouterLink className="list__link" to="/clases">
                         <li className="list__item">
                             <span className="list__title">Clases</span>
                         </li>
                     </RouterLink>
-                    <RouterLink className="list__link" to="#/">
+                    <RouterLink className="list__link" to="/nosotros">
                         <li className="list__item">
                             <span className="list__title">Nosotros</span>
                         </li>
