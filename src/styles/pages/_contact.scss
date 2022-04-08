@@ -1,0 +1,61 @@
+.contact {
+    width: 100%;
+    // height: 100vh;
+    height: 100%;
+    background-color: $blackColor;
+    .content {
+        display: flex;
+        width: 100%;
+        max-width: $maxPageWidth;
+        .header {
+            .header__title {
+                @include fluid-type(font-size, 600px, 1200px, 30px, 40px);
+            }
+        }
+        .data {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            .addresses {
+                display: flex;
+                flex-direction: column;
+                gap: 60px;
+                list-style: none;
+                padding: 0;
+                .address {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .header {
+                        .header__subtitle {
+                            margin: 0;
+                        }
+                    }
+                    .address-info {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        color: $whiteColor;
+                        font-size: 16px;
+                        .fas {
+                            color: $primaryColor;
+                        }
+                        .address__text {
+
+                        }
+                    }
+                }
+            }
+            .form {
+                width: 400px;
+                height: 500px;
+            }
+        }
+        .map {
+            width: 100%;
+            height: 400px;
+        }
+    }
+}

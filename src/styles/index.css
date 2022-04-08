@@ -663,6 +663,105 @@ html body .app .text-white {
   width: 100%;
 }
 
+.contact {
+  width: 100%;
+  height: 100%;
+  background-color: #242A35;
+}
+
+.contact .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.contact .content .header .header__title {
+  font-size: 30px;
+}
+
+@media screen and (min-width: 600px) {
+  .contact .content .header .header__title {
+    font-size: calc(30px + 10 * (100vw - 600px) / 600);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contact .content .header .header__title {
+    font-size: 40px;
+  }
+}
+
+.contact .content .data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.contact .content .data .addresses {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+  list-style: none;
+  padding: 0;
+}
+
+.contact .content .data .addresses .address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.contact .content .data .addresses .address .header .header__subtitle {
+  margin: 0;
+}
+
+.contact .content .data .addresses .address .address-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.contact .content .data .addresses .address .address-info .fas {
+  color: #F77B05;
+}
+
+.contact .content .data .form {
+  width: 400px;
+  height: 500px;
+}
+
+.contact .content .map {
+  width: 100%;
+  height: 400px;
+}
+
 .gallery {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1204,5 +1303,86 @@ html body .app .text-white {
   .carousel .slideshow .slideshow__button {
     display: none;
   }
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 30px;
+  width: 100%;
+  max-width: 550px;
+}
+
+.form .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  padding: 0;
+  width: 100%;
+}
+
+.form .section .form__label {
+  color: #FFFFFF;
+  font-weight: 700;
+}
+
+.form .section .form__input {
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  font-family: "Merriweather Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #F5F7FA;
+  border: none;
+  height: 50px;
+}
+
+.form .section .form__text-area {
+  border-radius: 10px;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  font-family: "Merriweather Sans", sans-serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: none;
+  background-color: #F5F7FA;
+  height: 150px;
+}
+
+.form .form__button {
+  border: none;
+  background-color: #F77B05;
+  border-radius: 10px;
+  height: 50px;
+  width: 50%;
+  color: #FFFFFF;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 900;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-transition: background-color .25s;
+  transition: background-color .25s;
+}
+
+.form .form__button:hover {
+  background-color: #C82D0B;
 }
 /*# sourceMappingURL=index.css.map */
