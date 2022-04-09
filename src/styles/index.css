@@ -485,7 +485,7 @@ html body .app .text-white {
   font-weight: 900;
 }
 
-.contact .content .map {
+.contact .content .contact__map {
   width: 600px;
   height: 400px;
   border: 0;
@@ -1116,6 +1116,20 @@ html body .app .text-white {
   position: relative;
 }
 
+.navbar .content .list .list__item--home:hover {
+  color: #F77B05;
+}
+
+.navbar .content .list .list__item--home:hover .hover-container {
+  display: inline-block;
+}
+
+.navbar .content .list .list__item--home:hover .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .navbar .content .list .list__item--home .home-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1127,6 +1141,21 @@ html body .app .text-white {
       -ms-flex-align: center;
           align-items: center;
   gap: 10px;
+}
+
+.navbar .content .list .list__item--home .hover-container {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  height: 270px;
+  width: 230px;
+}
+
+.navbar .content .list .list__item--home .hover-container:hover .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .navbar .content .list .list__item--home .dropdown {
@@ -1148,6 +1177,7 @@ html body .app .text-white {
   top: 40px;
   background-color: #0F141C;
   width: 200px;
+  color: #FFFFFF;
 }
 
 .navbar .content .list .list__item--home .dropdown.active {

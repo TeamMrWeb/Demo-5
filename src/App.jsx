@@ -1,10 +1,10 @@
 import {Route, Routes} from "react-router-dom";
-import Home from "./pages/home/Home";
-import Footer from "./components/Footer"
 import NotFound from "./pages/NotFound";
+import Contact from "./pages/Contact";
+import Home from "./pages/home/Home";
 import About from "./pages/About";
 import Navbar from "./components/Navbar";
-import Contact from "./pages/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
     return (

@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Activities from "./sections/Activities";
 import Welcome from "./sections/Welcome";
 import Contact from "./sections/Contact";
@@ -13,6 +14,11 @@ import image6 from "../../assets/gallery/image6.jpg";
 
 export default function Home() {
     const galleryImages = [image1, image2, image3, image4, image5, image6, image6, image6, image6, image6, image6, image6, image6, image6, image6];
+
+    useEffect(() => {
+        document.querySelector('.dropdown').style = "visibility: visible"
+        document.querySelector('.fa-angle-down').style = "visibility: visible"
+    }, [])
 
     return (
         <section className="home" >

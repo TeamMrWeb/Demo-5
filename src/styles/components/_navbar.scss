@@ -38,13 +38,32 @@
             .list__item--home {
                 cursor: pointer;
                 position: relative;
+                &:hover {
+                    color: $primaryColor;
+                    .hover-container {
+                        display: inline-block;
+                    }
+                    .dropdown {
+                        display: flex;
+                    }
+                }
                 .home-container {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     gap: 10px;
-                    .list__title {
-
+                }
+                .hover-container {
+                    display: none;
+                    position: absolute;
+                    top: 15px;
+                    left: -30px;
+                    height: 270px;
+                    width: 230px;
+                    &:hover {
+                        .dropdown {
+                            display: flex;
+                        }
                     }
                 }
                 .dropdown {
@@ -59,9 +78,8 @@
                     position: absolute;
                     top: 40px;
                     background-color: $secundaryBlackColor;
-                    // background-color: red;
                     width: 200px;
-                    // height: 100%;
+                    color: $whiteColor;
                     &.active {
                         display: flex;
                     }
@@ -69,11 +87,6 @@
                         cursor: pointer;
                         &:hover {
                             color: $primaryColor;
-                        }
-                        .dropdown__item {
-                            .dropdown__title {
-    
-                            }
                         }
                     }
                 }
