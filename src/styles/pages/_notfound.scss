@@ -1,15 +1,16 @@
-.nf-section{
+.not-found{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 94vh;
+    height: 74vh;
     background-color: $blackColor;
-    
-    .nf__description{
+    padding: 100px 0;
+    .not-found__description{
         color: $textBlackColor;
         font-size: 18px;
+        margin: 30px;
     }
 }

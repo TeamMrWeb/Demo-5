@@ -19,6 +19,8 @@ html {
         }
         .app {
             position: relative;
+    // overflow-y: scroll;
+
             .text-white {
                 color: $whiteColor;
             }

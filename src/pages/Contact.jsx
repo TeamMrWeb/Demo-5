@@ -12,11 +12,15 @@ export default function Contact() {
                 },
                 {
                     icon: "fa-phone",
-                    data: "+54 11 4444-4444"
+                    data: "3921-2302"
                 },
                 {
                     icon: "fa-envelope",
                     data: "hola@hotmail.com"
+                },
+                {
+                    icon: "fa-brands fa-whatsapp",
+                    data: "+54 11 4444-4444"
                 }
             ]
         },
@@ -29,11 +33,15 @@ export default function Contact() {
                 },
                 {
                     icon: "fa-phone",
-                    data: "+54 11 4444-4444"
+                    data: "+54 11 4453-1262"
                 },
                 {
                     icon: "fa-envelope",
                     data: "holav@hotmail.com"
+                },
+                {
+                    icon: "fa-brands fa-whatsapp",
+                    data: "+54 11 9999-9999"
                 }
             ]
         }
@@ -46,11 +54,15 @@ export default function Contact() {
                 },
                 {
                     icon: "fa-phone",
-                    data: "+54 11 4444-4444"
+                    data: "4444-4444"
                 },
                 {
                     icon: "fa-envelope",
                     data: "holac@hotmail.com"
+                },
+                {
+                    icon: "fa-brands fa-whatsapp",
+                    data: "+54 11 5555-5555"
                 }
             ]
         }
@@ -69,10 +81,18 @@ export default function Contact() {
                                         <Title subtitle="sede " subtitleColor={address.name} />
                                         {
                                             address.data.map((data, id) => {
+                                                console.log(data.icon.includes('envelope'))
                                                 return (
                                                     <div className="address-info" key={id}>
-                                                        <i className={`fas ${data.icon}`}></i>
-                                                        <span className="address__text">{data.data}</span>
+                                                        {data.icon.includes('brands') 
+                                                            ?
+                                                                <a className="address__link" href={`https://api.whatsapp.com/send?phone=${data.data}&text=Hola, quisiera conocer más sobre la sede de ${address.name} y sus planes`} target="_blank" rel="noreferrer">
+                                                                    <i className={data.icon}></i> 
+                                                                    <span className="address__text">{data.data}</span>
+                                                                </a>
+                                                            : <i className={`fas ${data.icon}`}></i>
+                                                            }
+                                                        {!data.icon.includes('brands') && <span className="address__text">{data.data}</span>}
                                                     </div>
                                                 )
                                             })

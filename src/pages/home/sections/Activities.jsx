@@ -38,7 +38,7 @@ export default function Activities() {
                     buttonLink={"/clases/yoga_classis"}
                 />
             </div>
-            <Button text="Conocer más" />
+            <Button text="Conocer más" to={"/actividades"} />
             <img className="activities__image" src={image1} alt="girlActivity" />
         </div>
     )

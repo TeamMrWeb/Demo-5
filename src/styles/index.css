@@ -701,7 +701,7 @@ html body .app .text-white {
   }
 }
 
-.nf-section {
+.not-found {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -717,13 +717,15 @@ html body .app .text-white {
           justify-content: center;
   position: relative;
   width: 100%;
-  height: 94vh;
+  height: 74vh;
   background-color: #242A35;
+  padding: 100px 0;
 }
 
-.nf-section .nf__description {
+.not-found .not-found__description {
   color: #60636C;
   font-size: 18px;
+  margin: 30px;
 }
 
 .contact {
@@ -811,8 +813,21 @@ html body .app .text-white {
   font-size: 16px;
 }
 
-.contact .content .data .addresses .address .address-info .fas {
+.contact .content .data .addresses .address .address-info i {
   color: #F77B05;
+  font-size: 20px;
+}
+
+.contact .content .data .addresses .address .address-info .address__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
 }
 
 .contact .content .data .form {
