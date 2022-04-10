@@ -1,0 +1,29 @@
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: $whiteColor;
+    border: 1px solid #ddd;
+    .table-header{
+        background-color: $blackColor;
+        &.invisible{
+            border: none;
+            background-color:transparent; 
+        }
+    }
+    .table-left-header{
+        font-weight: bold;
+        background-color:lightgray;
+    }
+    .table-td{
+        padding: 10px;
+        background-color: transparent;
+        &.active{
+            background-color: green;
+            color: $whiteColor;
+        }
+        &.invisible{
+            background-color: red;
+        }
+    }
+}
