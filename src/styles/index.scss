@@ -29,9 +29,10 @@ html {
 }
 
 //pages
-@import "./pages/home/home";
-@import "./pages/about";
 @import "./pages/notfound";
+@import "./pages/home/home";
+@import "./pages/classes"; // activities page
+@import "./pages/about";
 @import "./pages/contact";
 
 //components
