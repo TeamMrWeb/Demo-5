@@ -24,7 +24,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/clases/bodyshaping"}
+                            buttonLink={"/actividad?name=musculacion"}
                         />
                         <Card
                             title={"Fitness"}
@@ -33,7 +33,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/clases/extreme_fitness"}
+                            buttonLink={"/actividad?name=fitness"}
                         />
                         <Card
                             title={"Yoga"}
@@ -42,7 +42,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/clases/yoga "}
+                            buttonLink={"/actividad?name=yoga"}
                         />
                         <Card
                             title={"Spinning"}
@@ -51,7 +51,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/clases/spinning"}
+                            buttonLink={"/actividad?name=spinning"}
                         />
                         <Card
                             title={"Zumba"}
@@ -60,7 +60,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/clases/zumba"}
+                            buttonLink={"/actividad?name=zumba"}
                         />
                         <Card
                             title={"Fit Combat"}
@@ -69,7 +69,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/clases/fit_combat"}
+                            buttonLink={"/actividad?name=fitcombat"}
                         />
                     </div>
                 </div>
