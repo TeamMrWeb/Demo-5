@@ -57,7 +57,7 @@ export default function Plans() {
                                     <header className="header">
                                         <i className={"fa-solid " + plan.icon}></i>
                                         <h2 className="header__title">{plan.title}</h2>
-                                        <span className="header__subtitle"><span className="title-color">{plan.price}</span> / {plan.subtitle}</span>
+                                        <span className="header__subtitle"><span className="header__subtitle-color">{plan.price}</span> / {plan.subtitle}</span>
                                     </header>
                                     <ul className="list">
                                         {

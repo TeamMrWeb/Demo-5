@@ -1,49 +1,65 @@
-.about-section{
+.about {
     display: flex;
     align-items: center;
     justify-content: center;
     height: min-content;
     position: relative;
     width: 100%;
+    height: 100%;
+    padding-top: 200px;
     background-color: $blackColor;
-    .about-container{
+    .about-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         max-width: $maxPageWidth;
-        padding: 72px 0;
         width: 100%;
         height: 100%;
-        .about__description{
-            color: $whiteColor;
-            font-size: 18px;
-        }
-        .about-header{
+        .about-header {
             display: flex;
-            flex-direction: row;
             justify-content: center;
-            align-items: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
             width: 100%;
             height: 100%;
-            .about-left{
-                height: 100%;
+            column-gap: 40px;
+            .about-left {
                 width: 100%;
-                .about__image{
+                max-width: 600px;
+                height: 100%;
+                position: relative;
+                .about__image {
                     width: 100%;
                     height: 100%;
                 }
+                .about__image--front {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 80%;
+                    max-width: 600px;
+                }
             }
-            .about-right{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
+            .about-right {
                 width: 100%;
+                max-width: 630px;
                 height: 100%;
+                .about__description {
+                    color: $textColor;
+                    font-size: 18px;
+                }
+                .header {
+                    @include fluid-type(font-size, 600px, 1200px, 20px, 30px);
+                    .header__subtitle {
+                        font-size: 20px;
+                        color: $textColor;
+                        font-weight: 600;
+                    }
+                }
             }
         }
-        .about-content{
+        .about-content {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -51,10 +67,14 @@
             padding: 20px 0;
             width: 100%;
             height: 100%;
-            .about-cards{
+            .header {
+                @include fluid-type(font-size, 600px, 1200px, 20px, 30px);
+            }
+            .about-cards {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                flex-wrap: wrap;
                 gap: 20px;
                 height: 100%;
                 width: 100%;
@@ -64,33 +84,24 @@
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
-    .about-section{
-        .about-container{
-            padding: 0;
-            .about-header{
-                flex-direction: column;
-                text-align: center;
-                .header__title{
-                    font-size: 36px;
+    .about {
+        .about-container {
+            padding: 0 20px;
+            box-sizing: border-box;
+            .about-header {
+                .header__title {
                 }
-                .header__subtitle{
-                    font-size: 24px;
+                .header__subtitle {
                 }
-                .about-left{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                .about-left {
                 }
-                .about-right{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                .about-right {
                 }
             }
-            .about-content{
-                .about-cards{
-                    flex-direction: column;
-                    gap: 20px;
+            .about-content {
+                .about-cards {
+                    // flex-direction: column;
+                    // gap: 20px;
                 }
             }
         }
