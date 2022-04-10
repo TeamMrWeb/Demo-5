@@ -58,9 +58,9 @@ export default function Navbar() {
                             <span className="list__title">Actividades</span>
                         </li>
                     </RouterLink>
-                    <RouterLink className="list__link" to="/clases" onClick={() => removeDropdown()}>
+                    <RouterLink className="list__link" to="/calendario" onClick={() => removeDropdown()}>
                         <li className="list__item">
-                            <span className="list__title">Clases</span>
+                            <span className="list__title">Calendario</span>
                         </li>
                     </RouterLink>
                     <RouterLink className="list__link" to="/nosotros" onClick={() => removeDropdown()}>
