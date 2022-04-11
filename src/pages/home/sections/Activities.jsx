@@ -17,7 +17,7 @@ export default function Activities() {
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                     buttonEnabled={true}
                     buttonText={"Descubrir"}
-                    buttonLink={"/clases/bodyshaping"}
+                    buttonLink={"/actividad?name=musculacion"}
                 />
                 <Card
                     title={"Fitness"}
@@ -26,7 +26,7 @@ export default function Activities() {
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                     buttonEnabled={true}
                     buttonText={"Descubrir"}
-                    buttonLink={"/clases/extreme_fitness"}
+                    buttonLink={"/actividad?name=fitness"}
                 />
                 <Card
                     title={"Yoga"}
@@ -35,7 +35,7 @@ export default function Activities() {
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                     buttonEnabled={true}
                     buttonText={"Descubrir"}
-                    buttonLink={"/clases/yoga_classis"}
+                    buttonLink={"/actividad?name=yoga"}
                 />
             </div>
             <Button text="Conocer más" to={"/actividades"} />
