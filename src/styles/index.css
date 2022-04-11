@@ -660,6 +660,7 @@ html body .app .text-white {
   width: 100%;
   height: 100vh;
   background-color: #242A35;
+  padding: 200px 0;
 }
 
 .class-section .class-container {
@@ -679,6 +680,7 @@ html body .app .text-white {
   max-width: 1300px;
   width: 100%;
   height: 100%;
+  text-align: center;
 }
 
 .class-section .class-container .class-header {
@@ -740,9 +742,40 @@ html body .app .text-white {
   font-size: 24px;
 }
 
-.class-section .class-container .class-content .class-info .class-img {
+.class-section .class-container .class-content .class-info .class__img {
   width: 100%;
   height: 100%;
+}
+
+.class-section .class-container .class-content .class-schedule {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 100%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  padding: 20px 0;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .class-section {
+    height: 100%;
+    padding: 100px 0;
+  }
+  .class-section .class-container .class-content .class-info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .about {
@@ -1699,38 +1732,79 @@ html body .app .text-white {
 }
 
 .table {
-  width: 100%;
-  border-collapse: collapse;
-  border-spacing: 0;
   background-color: #FFFFFF;
-  border: 1px solid #ddd;
+  border-collapse: collapse;
+  width: 100%;
+  height: 100%;
 }
 
-.table .table-header {
-  background-color: #242A35;
-}
-
-.table .table-header.invisible {
-  border: none;
-  background-color: transparent;
-}
-
-.table .table-left-header {
-  font-weight: bold;
-  background-color: lightgray;
-}
-
-.table .table-td {
+.table .tooltip {
+  position: absolute;
   padding: 10px;
-  background-color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #242A35;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
+  display: none;
 }
 
-.table .table-td.active {
-  background-color: green;
+.table .table-head {
+  background-color: #0F141C;
+  border-bottom: 10px solid #C92D0B;
   color: #FFFFFF;
 }
 
-.table .table-td.invisible {
-  background-color: red;
+.table .table-head .table-head-cell {
+  padding: 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.table .table-body .table-body-left {
+  font-size: 24px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #0F141C;
+  border-right: 10px solid #C92D0B;
+}
+
+.table .table-body .table-body-left:hover {
+  background-color: #C92D0B;
+  cursor: pointer;
+}
+
+.table .table-body .table-body-left:hover .tooltip {
+  display: block;
+}
+
+.table .table-body .table-body-cell {
+  border: 1px solid #242A35;
+}
+
+.table .table-body .table-body-cell.inactive {
+  background-color: #C92D0B;
+  color: #FFFFFF;
+}
+
+.table .table-body .table-body-cell.active {
+  background-color: #F77B05;
+  color: #FFFFFF;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .table {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow-x: auto;
+  }
 }
 /*# sourceMappingURL=index.css.map */

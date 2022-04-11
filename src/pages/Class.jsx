@@ -16,31 +16,43 @@ const classes = [
         title: "musculacion",
         description: "lore",
         image: muscleimg,
+        activeDays: ["Lunes", "Martes"],
+        activeHours: [0, 1, 2]
     },
     {
         title: "fitness",
         description: "lore",
         image: fitnessimg,
+        activeDays: ["Miercoles", "Jueves"],
+        activeHours: [5]
     },
     {
         title: "yoga",
         description: "lore",
         image: yogaimg,
+        activeDays: ["Viernes", "Sabado"],
+        activeHours: [6]
     },
     {
         title: "spinning",
         description: "lore",
         image: spinningimg,
+        activeDays: ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"],
+        activeHours: [3, 4]
     },
     {
         title: "zumba",
         description: "lore",
         image: zumbaimg,
+        activeDays: ["Miercoles", "Jueves"],
+        activeHours: [6]
     },
     {
         title: "fitcombat",
         description: "lore",
         image: fitcombatimg,
+        activeDays: ["Lunes", "Miercoles", "Viernes"],
+        activeHours: [6]
     }
 ]
 
@@ -65,7 +77,6 @@ export default function Class() {
     useEffect(() => {
         const name = location.search.split("=")[1]
         setName(name)
-        console.log(getObjectClass(name).image)
     }, [name])
     
     if(!checkClassName(name)) return <NotFound description={"La clase que buscas no existe."}/>
@@ -82,7 +93,11 @@ export default function Class() {
                         <img className="class__img" src={getObjectClass(name).image} alt={name} />
                     </div>
                     <div className="class-schedule">
-                        <Table/>
+                    <Title title="Horarios" titleColor=" disponibles" />
+                        <Table 
+                            activeDays={getObjectClass(name).activeDays}
+                            activeHours={getObjectClass(name).activeHours}
+                        />
                     </div>
                 </div>
             </div>
