@@ -1,5 +1,9 @@
 import Title from "../components/Title";
 import Card from "../components/Card";
+
+import santiago from "../assets/about/santiago.png";
+import erick from "../assets/about/erick.png";
+import micaela from "../assets/about/micaela.png";
 import mainFigure from "../assets/figure.png";
 import workout from "../assets/about/workout.png";
 
@@ -26,20 +30,20 @@ export default function About() {
                     <Title title="Nuestro" titleColor=" entrenadores" />
                     <div className="about-cards">
                         <Card
-                            title={"Juan Perez"}
-                            backgroundImage={mainFigure}
+                            title={"Erick Quispe"}
+                            backgroundImage={erick}
                             backgroundColor={"#181818"}
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                         />
                         <Card
-                            title={"Juan Quispe"}
-                            backgroundImage={mainFigure}
+                            title={"Santiago Capdevila"}
+                            backgroundImage={santiago}
                             backgroundColor={"#181818"}
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                         />
                         <Card
-                            title={"Juan Borgoño"}
-                            backgroundImage={mainFigure}
+                            title={"Micaela Martearena"}
+                            backgroundImage={micaela}
                             backgroundColor={"#181818"}
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                         />
