@@ -778,6 +778,78 @@ html body .app .text-white {
   }
 }
 
+.schedule-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  padding: 100px 0;
+  background-color: #242A35;
+}
+
+.schedule-section .schedule-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1300px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.schedule-section .schedule-container .schedule-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  -ms-flex-negative: 3;
+      flex-shrink: 3;
+}
+
+.schedule-section .schedule-container .schedule-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .schedule-section {
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
+  }
+}
+
 .about {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1753,6 +1825,9 @@ html body .app .text-white {
   background-color: #242A35;
   -webkit-transform: translateX(100px);
           transform: translateX(100px);
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-size: 21px;
   display: none;
 }
 
@@ -1789,14 +1864,8 @@ html body .app .text-white {
   border: 1px solid #242A35;
 }
 
-.table .table-body .table-body-cell.inactive {
-  background-color: #C92D0B;
-  color: #FFFFFF;
-}
-
-.table .table-body .table-body-cell.active {
-  background-color: #F77B05;
-  color: #FFFFFF;
+.table .table-body .table-body-cell:hover .tooltip {
+  display: block;
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
@@ -1805,6 +1874,9 @@ html body .app .text-white {
     height: 100%;
     display: block;
     overflow-x: auto;
+  }
+  .table .table-body .table-body-cell:hover .tooltip {
+    display: none;
   }
 }
 /*# sourceMappingURL=index.css.map */

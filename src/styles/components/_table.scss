@@ -11,6 +11,9 @@
         align-items: center;
         background-color: $blackColor;
         transform: translateX(100px);
+        color: $whiteColor;
+        text-transform: uppercase;
+        font-size: 21px;
         display: none;
     }
     .table-head{
@@ -40,24 +43,29 @@
         }
         .table-body-cell{
             border: 1px solid $blackColor;
-            &.inactive{
-                background-color: $secundaryColor;
-                color: $whiteColor;
-            }
-            &.active{
-                background-color: $primaryColor;
-                color: $whiteColor;
+            &:hover{
+                .tooltip{
+                    display: block;
+                } 
             }
         }
     }
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
-
     .table{
         width: 100%;
         height: 100%;
         display: block;
         overflow-x: auto;
+        .table-body{
+            .table-body-cell{
+                &:hover{
+                    .tooltip{
+                        display: none;
+                    } 
+                }
+            }
+        }
     }
 }
