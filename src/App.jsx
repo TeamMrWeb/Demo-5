@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import About from "./pages/About";
 import Classes from "./pages/Classes";
 import Class from "./pages/Class"
+import Schedule from "./pages/Schedule";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
@@ -16,6 +17,7 @@ export default function App() {
                 <Route exact path="/" element={<Home />} />
                 <Route exact path="/actividades" element={<Classes />} />
                 <Route exact path="/actividad" element={<Class />} />
+                <Route exact path="/calendario" element={<Schedule />} />
                 <Route exact path="/nosotros" element={<About />}/>
                 <Route exact path="/contacto" element={<Contact />}/>
                 <Route path="*" element={<NotFound />} />
