@@ -1,3 +1,5 @@
+import { base_url } from "../../config"
+
 import Card from "../components/Card"
 import Title from "../components/Title"
 
@@ -24,7 +26,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/actividad?name=musculacion"}
+                            buttonLink={`/${base_url}/actividad?name=musculacion`}
                         />
                         <Card
                             title={"Fitness"}
@@ -33,7 +35,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/actividad?name=fitness"}
+                            buttonLink={`/${base_url}/actividad?name=fitness`}
                         />
                         <Card
                             title={"Yoga"}
@@ -42,7 +44,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/actividad?name=yoga"}
+                            buttonLink={`/${base_url}/actividad?name=yoga`}
                         />
                         <Card
                             title={"Spinning"}
@@ -51,7 +53,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/actividad?name=spinning"}
+                            buttonLink={`/${base_url}/actividad?name=spinning`}
                         />
                         <Card
                             title={"Zumba"}
@@ -60,7 +62,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/actividad?name=zumba"}
+                            buttonLink={`/${base_url}/actividad?name=zumba`}
                         />
                         <Card
                             title={"Fit Combat"}
@@ -69,7 +71,7 @@ export default function Classes() {
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={"/actividad?name=fitcombat"}
+                            buttonLink={`/${base_url}/actividad?name=fitcombat`}
                         />
                     </div>
                 </div>

@@ -2,7 +2,9 @@ import { useState, useRef } from "react";
 import { Link as RouterLink } from "react-router-dom";
 import { Link } from 'react-scroll';
 import { useNavbar } from "../hooks/useNavbar";
+import { base_url } from "../../config";
 import logo from '../assets/Navbar/logo.png';
+
 
 export default function Navbar() {
     const [burgerMenu, setBurgerMenu] = useState(false)
@@ -18,7 +20,7 @@ export default function Navbar() {
                 <img className="logo" src={logo} alt="logo" />
                 <ul className={burgerMenu ? "list active" : "list"}>
                     <li className="list__item--home list__item">
-                        <RouterLink className="list__link" to="/">
+                        <RouterLink className="list__link" to={`${base_url}/`}>
                             <div className="home-container">
                                     <span className="list__title">Inicio</span>
                                     <i className={"fa-solid " + (dropdown ? "fa-angle-up" : "fa-angle-down")} ref={homeIcon}></i>
@@ -53,22 +55,22 @@ export default function Navbar() {
                             </Link>
                         </ul>
                     </li>
-                    <RouterLink className="list__link" to="/actividades" onClick={() => removeDropdown()}>
+                    <RouterLink className="list__link" to={`${base_url}/actividades`} onClick={() => removeDropdown()}>
                         <li className="list__item">
                             <span className="list__title">Actividades</span>
                         </li>
                     </RouterLink>
-                    <RouterLink className="list__link" to="/calendario" onClick={() => removeDropdown()}>
+                    <RouterLink className="list__link" to={`${base_url}/calendario`} onClick={() => removeDropdown()}>
                         <li className="list__item">
                             <span className="list__title">Calendario</span>
                         </li>
                     </RouterLink>
-                    <RouterLink className="list__link" to="/nosotros" onClick={() => removeDropdown()}>
+                    <RouterLink className="list__link" to={`${base_url}/nosotros`} onClick={() => removeDropdown()}>
                         <li className="list__item">
                             <span className="list__title">Nosotros</span>
                         </li>
                     </RouterLink>
-                    <RouterLink className="list__link" to="/contacto" onClick={() => removeDropdown()}>
+                    <RouterLink className="list__link" to={`${base_url}/contacto`} onClick={() => removeDropdown()}>
                         <li className="list__item">
                             <span className="list__title">Contacto</span>
                         </li>
