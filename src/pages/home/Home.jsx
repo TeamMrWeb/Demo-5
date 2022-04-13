@@ -15,11 +15,11 @@ import image6 from "../../assets/gallery/image6.jpg";
 export default function Home() {
     const galleryImages = [
         {url: image1, alt: "Sala de musculación de gimnasio Tachancka"},
-        {url: image2, alt: "Cliente de gimnasio Tachancka bebiendo agua en su entrenamietno"},
-        {url: image3, alt: "Cliente de gimnasio Tachancka realizando la clase de fitCombat"},
-        {url: image4, alt: "Clientes de gimasio Tachancka haciendo flexiones de brazos a una mano en sala de musculación"},
-        {url: image5, alt: "Cliente de gimnasio Tachancka levantando pesas y entrenando en la sala de musculación del gimnasio"},
-        {url: image6, alt: "Cliente de gimnasio Tachancka realizando prensa de banca en la sala de musculación del gimnasio"}
+        {url: image2, alt: "Cliente bebiendo agua en su entrenamiento"},
+        {url: image3, alt: "Persona realizando la clase de fitCombat"},
+        {url: image4, alt: "Compañeros haciendo flexiones de brazos a una mano en sala de musculación"},
+        {url: image5, alt: "Hombre levantando pesas y entrenando Fitness en el gimnasio"},
+        {url: image6, alt: "Persona realizando prensa de piernas en la sala de musculación del gimnasio mientras su compañera añade peso"}
     ];
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export default function Home() {
     }, [])
 
     return (
-        <section className="home" >
+        <section className="home">
             <Welcome  />
             <Activities />
             <DivisorLine firstColor={"#242a35"} secondColor={"#0f141c"} />

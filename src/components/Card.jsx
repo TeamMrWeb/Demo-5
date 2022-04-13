@@ -15,7 +15,7 @@ export default function Card({
         <div className="card">
             {backgroundImage && 
                 <div className="card-background">
-                    <img className="card__image" src={backgroundImage} alt={`${backgroundImage}-fondo`} />
+                    <img className="card__image" src={backgroundImage} alt="" />
                 </div>
             }
             <div className="card-filter" style={{backgroundColor, opacity}} />

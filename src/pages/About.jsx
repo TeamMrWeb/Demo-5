@@ -13,8 +13,8 @@ export default function About() {
             <div className="about-container">
                 <div className="about-header">
                     <div className="about-left">
-                        <img className="about__image" src={mainFigure} alt="mainFigure" />
-                        <img className="about__image--front" src={workout} alt="workout" />
+                        <img className="about__image" src={mainFigure} alt="" />
+                        <img className="about__image--front" src={workout} alt="" />
                     </div>
                     <div className="about-right">
                         <Title 
