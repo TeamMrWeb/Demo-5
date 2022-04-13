@@ -309,7 +309,7 @@ html body .app .text-white {
   width: 100%;
   max-width: 1300px;
   height: 100%;
-  padding: 100px;
+  padding: 100px 20px;
 }
 
 .plans .content .cards {
