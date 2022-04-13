@@ -13,7 +13,14 @@ import image5 from "../../assets/gallery/image5.jpg";
 import image6 from "../../assets/gallery/image6.jpg";
 
 export default function Home() {
-    const galleryImages = [image1, image2, image3, image4, image5, image6];
+    const galleryImages = [
+        {url: image1, alt: "Sala de musculación de gimnasio Tachancka"},
+        {url: image2, alt: "Cliente de gimnasio Tachancka bebiendo agua en su entrenamietno"},
+        {url: image3, alt: "Cliente de gimnasio Tachancka realizando la clase de fitCombat"},
+        {url: image4, alt: "Clientes de gimasio Tachancka haciendo flexiones de brazos a una mano en sala de musculación"},
+        {url: image5, alt: "Cliente de gimnasio Tachancka levantando pesas y entrenando en la sala de musculación del gimnasio"},
+        {url: image6, alt: "Cliente de gimnasio Tachancka realizando prensa de banca en la sala de musculación del gimnasio"}
+    ];
 
     useEffect(() => {
         document.querySelector('.dropdown').style = "visibility: visible"

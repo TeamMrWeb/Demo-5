@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 export const Form = () => {
-    const form = useRef();
+    const form = useRef()
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -13,7 +13,7 @@ export const Form = () => {
             }, (error) => {
                 console.log(error.text);
             });
-    };
+    }
 
     return (
         <form className="form" ref={form} onSubmit={sendEmail}>

@@ -10,7 +10,7 @@ export default function Gallery({images}) {
                     <ul className="list">
                         {images.map((image, id) => (
                             <li className="gallery__item" key={id} >
-                                <img className="gallery__image" src={image} alt="gymImage" />
+                                <img className="gallery__image" src={image.url} alt={image.alt} />
                             </li>
                         ))}
                     </ul>
