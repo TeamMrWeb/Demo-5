@@ -188,6 +188,7 @@ html body .app .text-white {
   text-transform: uppercase;
   font-style: italic;
   font-weight: 800;
+  margin-bottom: 50px;
   font-size: 20px;
 }
 
@@ -275,7 +276,7 @@ html body .app .text-white {
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .activities {
-    padding: 0;
+    padding: 100px 20px;
   }
 }
 
@@ -640,6 +641,14 @@ html body .app .text-white {
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+  .classes-section {
+    padding: 100px 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
 }
 
 .class {
@@ -1743,7 +1752,7 @@ html body .app .text-white {
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  bottom: 50px;
+  bottom: 90px;
   width: 100%;
   max-width: 550px;
 }

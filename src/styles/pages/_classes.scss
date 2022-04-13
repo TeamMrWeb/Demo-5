@@ -37,7 +37,13 @@
                 width: 100%;
                 height: min-content;
             }
-
         }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 720px) {
+    .classes-section{
+        padding: 100px 20px;
+        box-sizing: border-box;
     }
 }
