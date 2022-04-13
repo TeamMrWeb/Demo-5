@@ -1,7 +1,7 @@
 import { useTable } from "../hooks/useTable";
 
-export default function Table({ classes }){
-    const { days, hours, hourDetails, getCellActiveColor, getCellActiveText } = useTable(classes);
+export default function Table({classes}){
+    const {days, hours, hourDetails, getCellActiveColor, getCellActiveText} = useTable(classes)
 
     const pushCells = (hour) => {
         let cells = [];
@@ -13,7 +13,7 @@ export default function Table({ classes }){
         )
         return cells
     }
-    console.log(classes)
+
     return (
         <table className="table">
             <thead className="table-head">

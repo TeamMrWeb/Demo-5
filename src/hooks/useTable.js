@@ -1,4 +1,3 @@
-
 export const useTable = (classes) => {
     const days = ["Hora", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
     const hours = [0, 1, 2, 3, 4, 5, 6];
@@ -20,5 +19,5 @@ export const useTable = (classes) => {
         return text
     }
 
-    return { days, hours, hourDetails, getCellActiveColor, getCellActiveText }
+    return {days, hours, hourDetails, getCellActiveColor, getCellActiveText}
 }

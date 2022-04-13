@@ -10,11 +10,9 @@
     font-style: italic;
     cursor: pointer;
     transition: all 1s;
+    text-decoration: none;
+    color: $whiteColor;
     &:hover {
         background-color: #C82D0B;
-    }
-    .button__link {
-        color: white;
-        text-decoration: none;
     }
 }

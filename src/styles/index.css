@@ -642,7 +642,7 @@ html body .app .text-white {
   height: min-content;
 }
 
-.class-section {
+.class {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -658,12 +658,12 @@ html body .app .text-white {
           align-items: center;
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #242A35;
-  padding: 200px 0;
+  padding-top: 150px;
 }
 
-.class-section .class-container {
+.class .container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -677,29 +677,50 @@ html body .app .text-white {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1300px;
+  gap: 20px;
   width: 100%;
+  max-width: 1300px;
   height: 100%;
-  text-align: center;
 }
 
-.class-section .class-container .class-header {
+.class .container .class-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
   width: 100%;
   height: 100%;
   -ms-flex-negative: 2;
       flex-shrink: 2;
 }
 
-.class-section .class-container .class-content {
+.class .container .class-header .button {
+  font-size: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.class .container .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap-reverse;
+      flex-wrap: wrap-reverse;
+  width: 100%;
+  height: 100%;
+}
+
+.class .container .content .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -707,47 +728,105 @@ html body .app .text-white {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
-  height: 100%;
 }
 
-.class-section .class-container .class-content .class-info {
+.class .container .content .info .info__description {
+  color: #D1D2D0;
+  text-align: left;
+  font-size: 20px;
+  max-width: 600px;
+}
+
+.class .container .content .info .features {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #FFFFFF;
+  font-size: 20px;
   width: 100%;
-  height: 100%;
-  text-align: center;
+}
+
+.class .container .content .info .features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  font-size: 40px;
+}
+
+@media screen and (min-width: 600px) {
+  .class .container .content .info .features .feature {
+    font-size: calc(40px + 10 * (100vw - 600px) / 600);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .class .container .content .info .features .feature {
+    font-size: 50px;
+  }
+}
+
+.class .container .content .info .features .feature .feature__text {
+  font-size: 15px;
+  font-style: italic;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 600px) {
+  .class .container .content .info .features .feature .feature__text {
+    font-size: calc(15px + 5 * (100vw - 600px) / 600);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .class .container .content .info .features .feature .feature__text {
+    font-size: 20px;
+  }
+}
+
+.class .container .content .info .features .feature i {
+  color: #F77B05;
+}
+
+.class .container .content .image-container {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
   border-radius: 10px;
 }
 
-.class-section .class-container .class-content .class-info .class__desc {
-  color: #FFFFFF;
-  font-size: 24px;
-}
-
-.class-section .class-container .class-content .class-info .class__img {
+.class .container .content .image-container .class__image {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 
-.class-section .class-container .class-content .class-schedule {
+.class .container .schedule {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -765,12 +844,21 @@ html body .app .text-white {
   padding: 20px 0;
 }
 
-@media screen and (min-width: 320px) and (max-width: 720px) {
-  .class-section {
-    height: 100%;
-    padding: 100px 0;
+@media screen and (min-width: 320px) and (max-width: 1050px) {
+  .class {
+    padding: 150px 20px;
+    padding-bottom: 0;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
-  .class-section .class-container .class-content .class-info {
+  .class .container .content {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-column-gap: 20px;
+            column-gap: 20px;
+  }
+  .class .container .content .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -828,6 +916,10 @@ html body .app .text-white {
       flex-shrink: 3;
 }
 
+.schedule-section .schedule-container .schedule-header .header .header__subtitle {
+  text-align: left;
+}
+
 .schedule-section .schedule-container .schedule-content {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -844,9 +936,11 @@ html body .app .text-white {
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .schedule-section {
-    height: -webkit-min-content;
-    height: -moz-min-content;
-    height: min-content;
+    padding: 150px 20px;
+    padding-bottom: 100px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    height: 100vh;
   }
 }
 
@@ -1187,6 +1281,7 @@ html body .app .text-white {
       flex-wrap: wrap;
   gap: 16px;
   padding: 0;
+  list-style: none;
 }
 
 .gallery .content .gallery-container .list .gallery__item .gallery__image {
@@ -1217,6 +1312,8 @@ html body .app .text-white {
   cursor: pointer;
   -webkit-transition: all 1s;
   transition: all 1s;
+  text-decoration: none;
+  color: #FFFFFF;
 }
 
 @media screen and (min-width: 600px) {
@@ -1233,11 +1330,6 @@ html body .app .text-white {
 
 .button:hover {
   background-color: #C82D0B;
-}
-
-.button .button__link {
-  color: white;
-  text-decoration: none;
 }
 
 .footer {
@@ -1833,7 +1925,7 @@ html body .app .text-white {
 
 .table .table-head {
   background-color: #0F141C;
-  border-bottom: 10px solid #C92D0B;
+  border-bottom: 10px solid #F77B05;
   color: #FFFFFF;
 }
 
@@ -1848,7 +1940,7 @@ html body .app .text-white {
   text-align: center;
   color: #FFFFFF;
   background-color: #0F141C;
-  border-right: 10px solid #C92D0B;
+  border-right: 10px solid #F77B05;
 }
 
 .table .table-body .table-body-left:hover {
@@ -1871,7 +1963,9 @@ html body .app .text-white {
 @media screen and (min-width: 320px) and (max-width: 720px) {
   .table {
     width: 100%;
-    height: 100%;
+    height: -webkit-min-content;
+    height: -moz-min-content;
+    height: min-content;
     display: block;
     overflow-x: auto;
   }

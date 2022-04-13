@@ -71,7 +71,7 @@ export default function Contact() {
     return (
         <section className="contact">
             <div className="content">
-                <Title title="No dudes en " titleColor="contactarnos" />
+                <Title title="No dudes en " titleColor="contactarnos!" />
                 <div className="data">
                     <ul className="addresses">
                         {

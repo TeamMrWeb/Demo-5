@@ -1,14 +1,12 @@
-import { base_url } from "../../config"
-
-import Card from "../components/Card"
-import Title from "../components/Title"
-
-import muscle from "../assets/Activities/muscle.png"
-import fitness from "../assets/Activities/fitness.png"
-import yoga from "../assets/Activities/yoga.png"
-import spinning from "../assets/Activities/spinning.png"
-import zumba from "../assets/Activities/zumba.png"
-import fitcombat from "../assets/Activities/fitcombat.png"
+import Title from "../components/Title";
+import Card from "../components/Card";
+import fitcombat from "../assets/Activities/fitcombat.png";
+import spinning from "../assets/Activities/spinning.png";
+import fitness from "../assets/Activities/fitness.png";
+import muscle from "../assets/Activities/muscle.png";
+import zumba from "../assets/Activities/zumba.png";
+import yoga from "../assets/Activities/yoga.png";
+import { base_url } from "../../config";
 
 export default function Classes() {
     return (
@@ -29,13 +27,13 @@ export default function Classes() {
                             buttonLink={`/${base_url}/actividad?name=musculacion`}
                         />
                         <Card
-                            title={"Fitness"}
+                            title={"Crossfit"}
                             backgroundImage={fitness}
                             backgroundColor={"#292D34"}
                             paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                             buttonEnabled={true}
                             buttonText={"Descubrir"}
-                            buttonLink={`/${base_url}/actividad?name=fitness`}
+                            buttonLink={`/${base_url}/actividad?name=crossfit`}
                         />
                         <Card
                             title={"Yoga"}

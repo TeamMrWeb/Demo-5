@@ -22,13 +22,13 @@ export default function Activities() {
                     buttonLink={`/${base_url}/actividad?name=musculacion`}
                 />
                 <Card
-                    title={"Fitness"}
+                    title={"Crossfit"}
                     backgroundImage={fitness}
                     backgroundColor={"#292D34"}
                     paragraph="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure consequatur nulla ab accusantium ea eos, blanditiis cum, enim amet soluta doloribus rem? Nulla odio corrupti a illo non, nemo accusantium?"
                     buttonEnabled={true}
                     buttonText={"Descubrir"}
-                    buttonLink={`/${base_url}/actividad?name=fitness`}
+                    buttonLink={`/${base_url}/actividad?name=crossfit`}
                 />
                 <Card
                     title={"Yoga"}

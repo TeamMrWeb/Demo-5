@@ -1,5 +1,5 @@
-import figureGray from '../../../assets/Home/figureGray.png'
-import Title from "../../../components/Title"
+import Title from "../../../components/Title";
+import figureGray from '../../../assets/Home/figureGray.png';
 
 export default function Plans() {
     const plans = [
@@ -46,7 +46,7 @@ export default function Plans() {
 
     return (
         <div className="plans">
-            <div name="gallery" className="scroll"></div>
+            <div name="plans" className="scroll"></div>
             <div className="content">
                 <Title title="Nuestra " titleColor="membresía" subtitle="Conoce todos nuestros " subtitleColor="planes" />
                 <div className="cards">

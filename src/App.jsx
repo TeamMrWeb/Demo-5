@@ -1,15 +1,14 @@
-import {Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import { base_url } from "../config";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Schedule from "./pages/Schedule";
 import NotFound from "./pages/NotFound";
+import Classes from "./pages/Classes";
 import Contact from "./pages/Contact";
 import Home from "./pages/home/Home";
 import About from "./pages/About";
-import Classes from "./pages/Classes";
-import Class from "./pages/Class"
-import Schedule from "./pages/Schedule";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-
+import Class from "./pages/Class";
 
 export default function App() {
     return (

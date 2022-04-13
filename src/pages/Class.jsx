@@ -1,17 +1,16 @@
-import { useState, useEffect} from "react"
-import { useLocation } from "react-router-dom"
+import { useState, useEffect } from "react";
+import { useLocation, Link as RouterLink } from "react-router-dom";
 import { useClasses } from "../hooks/useClasses";
-
-import NotFound from "./NotFound";
-import Title from "../components/Title"
+import { base_url } from "../../config";
 import Table from "../components/Table";
-
+import Title from "../components/Title";
+import NotFound from "./NotFound";
+import Button from "../components/Button";
 
 export default function Class() {
-    let location = useLocation();
-
-    const { getObjectClass, filterObjectClass, checkClassName } = useClasses();
+    const {getObjectClass, filterObjectClass, checkClassName} = useClasses();
     const [name, setName] = useState("")
+    let location = useLocation();
 
     useEffect(() => {
         const name = location.search.split("=")[1]
@@ -19,22 +18,38 @@ export default function Class() {
     }, [name])
     
     if(!checkClassName(name)) return <NotFound description={"La clase que buscas no existe."}/>
+    
     return (
-        <section className="class-section">
-            <div className="class-container">
+        <section className="class">
+            <div className="container">
                 <div className="class-header">
                     <Title title="Clase de " titleColor={name} />
+                    <Button text="Volver a Actividades" to={`${base_url}/actividades`} />
                 </div>
-                <div className="class-content">
-                    <div className="class-info">
-                        <p className="class__desc"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae culpa laboriosam aut cum fugiat sapiente id voluptate eaque reprehenderit? Rem ipsum, quis nihil nam maiores repellendus accusamus non doloremque? </p>
-                        <img className="class__img" src={getObjectClass(name).image} alt={name} />
+                <div className="content">
+                    <div className="info">
+                        <p className="info__description">{getObjectClass(name).description}</p>   
+                        <ul className="features">
+                            {
+                                getObjectClass(name).features.map((feature, id) => {
+                                    return (
+                                        <li className="feature" key={id}>
+                                            <i className={feature.icon}></i>
+                                            <span className="feature__text">{feature.iconText}</span>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
                     </div>
-                    <div className="class-schedule">
+                    <div className="image-container">
+                        <img className="class__image" src={getObjectClass(name).image} alt={`clase-de-${name}-referencia-ejercicio`} />
+                    </div>
+                </div>
+                <aside className="schedule">
                     <Title title="Horarios" titleColor=" disponibles" />
-                        <Table classes={filterObjectClass(name)} />
-                    </div>
-                </div>
+                    <Table classes={filterObjectClass(name)} />
+                </aside>
             </div>
         </section>
     )

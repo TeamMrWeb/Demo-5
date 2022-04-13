@@ -18,7 +18,7 @@
     }
     .table-head{
         background-color: $secundaryBlackColor;
-        border-bottom: 10px solid $secundaryColor;
+        border-bottom: 10px solid $primaryColor;
         color: $whiteColor;
         .table-head-cell{
             padding: 20px;
@@ -32,7 +32,7 @@
             text-align: center;
             color: $whiteColor;
             background-color: $secundaryBlackColor;
-            border-right: 10px solid $secundaryColor;
+            border-right: 10px solid $primaryColor;
             &:hover{
                 background-color: $secundaryColor;
                 cursor: pointer;
@@ -55,7 +55,7 @@
 @media screen and (min-width: 320px) and (max-width: 720px) {
     .table{
         width: 100%;
-        height: 100%;
+        height: min-content;
         display: block;
         overflow-x: auto;
         .table-body{

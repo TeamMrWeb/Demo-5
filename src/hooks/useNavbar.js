@@ -2,11 +2,11 @@ import { useEffect } from "react";
 
 export const useNavbar = (setNavbar, dropdown, setDropdown, dropdownList, homeIcon) => {
     useEffect(() => {
-        if(window.location.pathname !== '/') removeDropdown()
+        window.location.pathname !== '/Demo-5/' && removeDropdown()
     }, [])
 
     const removeDropdown = () => { 
-        dropdownList.current.visibility = "hidden"
+        dropdownList.current.style.visibility = "hidden"
         homeIcon.current.style.visibility = "hidden"
         homeIcon.current.style.position = "absolute"
     }
