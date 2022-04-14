@@ -25,7 +25,7 @@ export default function Contact() {
     ]
 
     return (
-        <div className="contact">
+        <div className="contact borraestoboludo">
             <div name="contact" className="scroll"></div>
             <div className="content">
                 <div className="info">

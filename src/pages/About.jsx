@@ -1,11 +1,10 @@
 import Title from "../components/Title";
 import Card from "../components/Card";
-
 import santiago from "../assets/about/santiago.png";
-import erick from "../assets/about/erick.png";
 import micaela from "../assets/about/micaela.png";
-import mainFigure from "../assets/figure.png";
 import workout from "../assets/about/workout.png";
+import erick from "../assets/about/erick.png";
+import mainFigure from "../assets/figure.png";
 
 export default function About() {
     return (
