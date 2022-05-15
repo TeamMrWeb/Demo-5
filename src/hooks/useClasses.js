@@ -11,15 +11,15 @@ export const useClasses = () => {
             name: "musculacion",
             description: "lore",
             image: fitnessImg,
-            description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae molestiae culpa laboriosam aut cum fugiat sapiente id voluptate eaque reprehenderit? Rem ipsum, quis nihil nam maiores repellendus accusamus non doloremque?",
+            description: "La musculación es una disciplina que requiere tiempo, dedicación y esfuerzo. Como su propio nombre indica, su objetivo es el desarrollo de los músculos.",
             color: "gray",
             activeDays: ["Lunes", "Martes"],
             activeHours: [0, 1, 2],
-            duration: 60,
+            duration: 30,
             features: [
                 {
                     icon: "fa-solid fa-clock",
-                    iconText: "60 minutos"
+                    iconText: "30 minutos"
                 },
                 {
                     icon: "fa-solid fa-fire-flame-curved",

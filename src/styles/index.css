@@ -82,7 +82,9 @@ html {
   height: 100vh;
 }
 
-html*, html *::before, html *::after {
+html*,
+html *::before,
+html *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
 }
@@ -106,6 +108,10 @@ html body .app {
 
 html body .app .text-white {
   color: #FFFFFF;
+}
+
+html body .app .title-color {
+  color: #F77B05;
 }
 
 .not-found {
@@ -927,6 +933,13 @@ html body .app .text-white {
 
 .schedule-section .schedule-container .schedule-header .header .header__subtitle {
   text-align: left;
+}
+
+.schedule-section .schedule-container .schedule__description {
+  color: #D1D2D0;
+  text-align: left;
+  font-size: 20px;
+  max-width: 600px;
 }
 
 .schedule-section .schedule-container .schedule-content {
@@ -1963,6 +1976,10 @@ html body .app .text-white {
 
 .table .table-body .table-body-cell {
   border: 1px solid #242A35;
+}
+
+.table .table-body .table-body-cell:hover {
+  cursor: pointer;
 }
 
 .table .table-body .table-body-cell:hover .tooltip {

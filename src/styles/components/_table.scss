@@ -1,71 +1,72 @@
-.table{
-    background-color: $whiteColor;
-    border-collapse: collapse;
-    width: 100%;
-    height: 100%;
-    .tooltip{
-        position: absolute;
-        padding: 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: $blackColor;
-        transform: translateX(100px);
-        color: $whiteColor;
-        text-transform: uppercase;
-        font-size: 21px;
-        display: none;
-    }
-    .table-head{
-        background-color: $secundaryBlackColor;
-        border-bottom: 10px solid $primaryColor;
-        color: $whiteColor;
-        .table-head-cell{
-            padding: 20px;
-            font-size: 24px;
-            text-align: center;
-        }
-    }
-    .table-body{
-        .table-body-left{
-            font-size: 24px;
-            text-align: center;
-            color: $whiteColor;
-            background-color: $secundaryBlackColor;
-            border-right: 10px solid $primaryColor;
-            &:hover{
-                background-color: $secundaryColor;
-                cursor: pointer;
-                .tooltip{
-                    display: block;
-                }
-            }
-        }
-        .table-body-cell{
-            border: 1px solid $blackColor;
-            &:hover{
-                .tooltip{
-                    display: block;
-                } 
-            }
-        }
-    }
+.table {
+	background-color: $whiteColor;
+	border-collapse: collapse;
+	width: 100%;
+	height: 100%;
+	.tooltip {
+		position: absolute;
+		padding: 10px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $blackColor;
+		transform: translateX(100px);
+		color: $whiteColor;
+		text-transform: uppercase;
+		font-size: 21px;
+		display: none;
+	}
+	.table-head {
+		background-color: $secundaryBlackColor;
+		border-bottom: 10px solid $primaryColor;
+		color: $whiteColor;
+		.table-head-cell {
+			padding: 20px;
+			font-size: 24px;
+			text-align: center;
+		}
+	}
+	.table-body {
+		.table-body-left {
+			font-size: 24px;
+			text-align: center;
+			color: $whiteColor;
+			background-color: $secundaryBlackColor;
+			border-right: 10px solid $primaryColor;
+			&:hover {
+				background-color: $secundaryColor;
+				cursor: pointer;
+				.tooltip {
+					display: block;
+				}
+			}
+		}
+		.table-body-cell {
+			border: 1px solid $blackColor;
+			&:hover {
+				cursor: pointer;
+				.tooltip {
+					display: block;
+				}
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 320px) and (max-width: 720px) {
-    .table{
-        width: 100%;
-        height: min-content;
-        display: block;
-        overflow-x: auto;
-        .table-body{
-            .table-body-cell{
-                &:hover{
-                    .tooltip{
-                        display: none;
-                    } 
-                }
-            }
-        }
-    }
+	.table {
+		width: 100%;
+		height: min-content;
+		display: block;
+		overflow-x: auto;
+		.table-body {
+			.table-body-cell {
+				&:hover {
+					.tooltip {
+						display: none;
+					}
+				}
+			}
+		}
+	}
 }
